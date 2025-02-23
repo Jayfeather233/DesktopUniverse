@@ -62,3 +62,9 @@ SCI:
 ![](./img/s_j.png)
 IO(Jupiter)-CI:
 ![](./img/io_j.png)
+
+## TODO
+
+- skybox
+- planetory texture
+- migrate to windows(maybe)

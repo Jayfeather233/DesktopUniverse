@@ -38,19 +38,14 @@ void framebuffer_size_callback(GLFWwindow *window, int width, int height)
     SCR_WIDTH = width;
     SCR_HEIGHT = height;
     cam3d.updateSCRratio(width, height);
-    
-    // shaderProgram_text->bind();
-    // shaderProgram_text->setUniform("projection", glm::ortho(0.0f, static_cast<float>(SCR_WIDTH), 0.0f, static_cast<float>(SCR_HEIGHT)));
-    
+
     shaderProgram_flat->bind();
-    // glm::mat4 m = glm::mat4(1.0f);
-    // m[0][0] = 1.0f/SCR_WIDTH;
-    // m[1][1] = 1.0f/SCR_HEIGHT;
     glm::mat4 m = glm::ortho(0.0f, static_cast<float>(SCR_WIDTH), 0.0f, static_cast<float>(SCR_HEIGHT));
     shaderProgram_flat->setUniform("projection", m);
 }
 void processInput(GLFWwindow *window, float deltaTime);
 void scroll_callback(GLFWwindow *window, double xoffset, double yoffset);
+void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 
 std::vector<celestial> bodies_csv;
 
@@ -265,6 +260,7 @@ int main()
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     glfwSetScrollCallback(window, scroll_callback);
     // glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    // glfwSetCursorPosCallback(window, mouse_callback);
     glfwSwapInterval(1); // Enable vsync
 
     cam3d.updateSCRratio(SCR_WIDTH, SCR_HEIGHT);
@@ -392,3 +388,21 @@ void processInput(GLFWwindow *window, float deltaTime)
 // glfw: whenever the mouse scroll wheel scrolls, this callback is called
 // ----------------------------------------------------------------------
 void scroll_callback(GLFWwindow *window, double xoffset, double yoffset) { cam3d.ProcessMouseScroll(yoffset); }
+void mouse_callback(GLFWwindow* window, double xpos, double ypos)
+{
+    static double lastX = 0, lastY = 0;
+    static bool firstMouse = true;
+    if (firstMouse)
+    {
+        lastX = xpos;
+        lastY = ypos;
+        firstMouse = false;
+    }
+    GLfloat xoffset = xpos - lastX;
+    GLfloat yoffset = lastY - ypos;
+    lastX = xpos;
+    lastY = ypos;
+    fmt::print("xoffset: {}, yoffset: {}\n", xoffset, yoffset);
+    fmt::print("xpos: {}, ypos: {}\n", xpos, ypos);
+    cam3d.ProcessMouseMovement(xoffset, yoffset);
+}
