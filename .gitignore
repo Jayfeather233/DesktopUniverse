@@ -5,3 +5,5 @@ test*
 
 *.txt
 !CMakeLists.txt
+
+*.out*

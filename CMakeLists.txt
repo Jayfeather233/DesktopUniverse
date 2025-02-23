@@ -27,7 +27,6 @@ aux_source_directory(./src MAIN_SOURCES)
 aux_source_directory(./src/opengl OGL_SOURCES)
 aux_source_directory(./src/basic BASIC_SOURCES)
 aux_source_directory(./lib/imgui IMGUI_SOURCES)
-# aux_source_directory(./lib/erfa/src ERFA_SOURCES)
 
 list(APPEND  IMGUI_SOURCES ./lib/imgui/backends/imgui_impl_glfw.cpp ./lib/imgui/backends/imgui_impl_opengl3.cpp)
 # list(APPEND ERFA_SOURCES ./lib/erfa/src/dtf2d.c)

@@ -41,16 +41,39 @@ void framebuffer_size_callback(GLFWwindow *window, int width, int height)
     
     // shaderProgram_text->bind();
     // shaderProgram_text->setUniform("projection", glm::ortho(0.0f, static_cast<float>(SCR_WIDTH), 0.0f, static_cast<float>(SCR_HEIGHT)));
+    
+    shaderProgram_flat->bind();
+    // glm::mat4 m = glm::mat4(1.0f);
+    // m[0][0] = 1.0f/SCR_WIDTH;
+    // m[1][1] = 1.0f/SCR_HEIGHT;
+    glm::mat4 m = glm::ortho(0.0f, static_cast<float>(SCR_WIDTH), 0.0f, static_cast<float>(SCR_HEIGHT));
+    shaderProgram_flat->setUniform("projection", m);
 }
 void processInput(GLFWwindow *window, float deltaTime);
 void scroll_callback(GLFWwindow *window, double xoffset, double yoffset);
 
 std::vector<celestial> bodies_csv;
 
+static int center_id = -1;
+static int focus_id = -1;
+void setCenterBody(size_t i) {
+    center_id = i;
+    calculateTr(bodies_csv, bodies_csv[center_id]);
+    fmt::print("traj calculated\n");
+    tr.set_trajectories(bodies_csv);
+    tr.setCenter(bodies_csv[center_id]);
+    fmt::print("traj reset\n");
+    fmt::print("center {}\n", bodies_csv[center_id].name);
+}
+
+void setFocusBody(size_t i) {
+    focus_id = i;
+    if(bodies_csv[focus_id].radiusX > 0) cam3d.distance = bodies_csv[focus_id].radiusX * 5;
+    fmt::print("focus {}\n", bodies_csv[focus_id].name);
+}
+
 void render_gui(double traj_id)
 {
-    static int center_id = -1;
-
     // Create a combo box to select celestial body
     if (ImGui::BeginCombo("Center Body", center_id == -1 ? "None" : bodies_csv[center_id].name.c_str()))
     {
@@ -61,13 +84,7 @@ void render_gui(double traj_id)
             {
                 if (center_id != i)
                 {
-                    center_id = i;
-                    calculateTr(bodies_csv, bodies_csv[center_id]);
-                    fmt::print("traj calculated\n");
-                    tr.set_trajectories(bodies_csv);
-                    tr.setCenter(bodies_csv[center_id]);
-                    fmt::print("traj reset\n");
-                    fmt::print("center {}\n", bodies_csv[center_id].name);
+                    setCenterBody(i);
                 }
             }
             if (isSelected)
@@ -77,8 +94,6 @@ void render_gui(double traj_id)
         }
         ImGui::EndCombo();
     }
-
-    static int focus_id = -1;
 
     // Create a combo box to select celestial body
     if (ImGui::BeginCombo("Focus Body", focus_id == -1 ? "None" : bodies_csv[focus_id].name.c_str()))
@@ -90,9 +105,7 @@ void render_gui(double traj_id)
             {
                 if (focus_id != i)
                 {
-                    focus_id = i;
-                    if(bodies_csv[focus_id].radiusX > 0) cam3d.distance = bodies_csv[focus_id].radiusX * 5;
-                    fmt::print("focus {}\n", bodies_csv[i].name);
+                    setFocusBody(i);
                 }
             }
             if (isSelected)
@@ -177,11 +190,6 @@ void render_all(std::vector<celestial> bodies_csv, double traj_id)
     tr.setID(traj_id);
     tr.render(shaderProgram_traj);
     shaderProgram_flat->bind();
-    // glm::mat4 m = glm::mat4(1.0f);
-    // m[0][0] = 1.0f/SCR_WIDTH;
-    // m[1][1] = 1.0f/SCR_HEIGHT;
-    glm::mat4 m = glm::ortho(0.0f, static_cast<float>(SCR_WIDTH), 0.0f, static_cast<float>(SCR_HEIGHT));
-    shaderProgram_flat->setUniform("projection", m);
     oUI.update_position(bodies_csv, traj_id, cam3d, SCR_WIDTH, SCR_HEIGHT);
     oUI.render(shaderProgram_flat);
     shaderProgram_text->bind();
@@ -287,23 +295,33 @@ int main()
     shaderProgram_text = ogl::programFromFiles("./shaders", "simple_text.vs", "simple_text.fs");
     shaderProgram_text->bind();
     shaderProgram_text->setUniform("projection", glm::ortho(-1.0f, 1.0f, -1.0f, 1.0f));
+    glm::mat4 m = glm::ortho(0.0f, static_cast<float>(SCR_WIDTH), 0.0f, static_cast<float>(SCR_HEIGHT));
+    shaderProgram_flat->setUniform("projection", m);
     fmt::print("OpenGL Initialized\n");
     so.genBuffer();
     oUI.genBuffer();
     ft.init();
     fmt::print("Buffer Generated.\n");
 
-    float lastTime = glfwGetTime();
+    double lastTime = glfwGetTime();
     const int targetFPS = 75;
-    const float frameDuration = 1.0 / targetFPS;
+    const double frameDuration = 1.0 / targetFPS;
 
     double ddd = 0;
+    tr.setID(secsSinceStartOfMonth());
+    for(size_t i = 0; i < bodies_csv.size(); ++i) {
+        if (bodies_csv[i].id == "10") {
+            setCenterBody(i);
+            setFocusBody(i);
+            break;
+        }
+    }
 
     // Rendering loop
     while (!glfwWindowShouldClose(window))
     {
-        float currentTime = glfwGetTime();
-        float deltaTime = currentTime - lastTime;
+        double currentTime = glfwGetTime();
+        double deltaTime = currentTime - lastTime;
         // if (deltaTime < frameDuration) {
         //     std::this_thread::sleep_for(
         //         std::chrono::milliseconds(static_cast<int64_t>(1000 * (frameDuration - deltaTime))));

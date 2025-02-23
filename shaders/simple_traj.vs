@@ -10,7 +10,7 @@ uniform dvec4 offset;
 
 void main() {
   dvec4 pr = projection * view3D * (dvec4(aPos, 1.0)+offset);
-  // dvec4 pr2 = pr / pr.w;
-  gl_Position = vec4(pr.xy/pr.w, log(float(pr.z))/100 ,1.0);
+  double depth = log(float(pr.z))/100;
+  gl_Position = vec4(pr.xy/pr.z, depth,1.0);
   ourColor = aColor;
 }

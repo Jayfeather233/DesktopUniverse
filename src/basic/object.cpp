@@ -9,6 +9,26 @@
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
+template<glm::length_t L, typename T, glm::qualifier Q>
+T calculateAngle(const glm::vec<L, T, Q>& vec1, const glm::vec<L, T, Q>& vec2) {
+    // Normalize the vectors
+    glm::vec<L, T, Q> normVec1 = glm::normalize(vec1);
+    glm::vec<L, T, Q> normVec2 = glm::normalize(vec2);
+
+    // Calculate the dot product
+    T dotProduct = glm::dot(normVec1, normVec2);
+
+    // Clamp the value between -1 and 1 to avoid floating-point precision errors
+    dotProduct = glm::clamp(dotProduct, static_cast<T>(-1.0), static_cast<T>(1.0));
+
+    // Calculate the angle in radians
+    T angle = acos(dotProduct);
+
+    // Optionally, convert to degrees
+    // float angleInDegrees = glm::degrees(angle);
+    return angle; // in radians
+}
+
 template <int x, int y, typename T>
 void printMatrix(const glm::mat<x, y, T, glm::highp> &matrix)
 {
@@ -132,13 +152,39 @@ void trajectory::set_trajectories(const std::vector<celestial> &bodies)
     {
         if (body.radiusX > 0.0)
         {
-            for (size_t i = (id/60); i < body.tr_trajectory.size() - 10; i += 10)
+            size_t las = (id/60);
+            for (size_t i = las; i < body.tr_trajectory.size(); ++i)
             { // t min
                 // fmt::print("{}\n", i);
-                const auto &start = body.tr_trajectory[i];
-                const auto &end = body.tr_trajectory[i + 10];
+                const auto &start = body.tr_trajectory[las];
+                const auto &end = body.tr_trajectory[i];
+                
+                const double two_pi = glm::pi<double>() * 2.0;
+                if (calculateAngle(glm::dvec3(start.vx, start.vy, start.vz), glm::dvec3(end.vx, end.vy, end.vz)) < two_pi/40 /*&& i - las < 300*/)
+                continue;
+
+                las = i;
 
                 // Create vertex positions for the trajectory lines
+                trajectoryVertices.push_back(start.x);
+                trajectoryVertices.push_back(start.y);
+                trajectoryVertices.push_back(start.z);
+
+                trajectoryVertices.push_back(end.x);
+                trajectoryVertices.push_back(end.y);
+                trajectoryVertices.push_back(end.z);
+
+                trajectoryColors.push_back(1.0f);
+                trajectoryColors.push_back(0.0f);
+                trajectoryColors.push_back(0.0f);
+
+                trajectoryColors.push_back(1.0f);
+                trajectoryColors.push_back(1.0f);
+                trajectoryColors.push_back(1.0f);
+            }
+            if (las == static_cast<size_t>(id/60)) {
+                const auto &start = body.tr_trajectory[las];
+                const auto &end = *(body.tr_trajectory.end()-1);
                 trajectoryVertices.push_back(start.x);
                 trajectoryVertices.push_back(start.y);
                 trajectoryVertices.push_back(start.z);
@@ -158,7 +204,7 @@ void trajectory::set_trajectories(const std::vector<celestial> &bodies)
         }
     }
 
-    fmt::print("gen buffer\n");
+    fmt::print("gen buffer: {}\n", trajectoryVertices.size()/3);
     // Re-generate buffers every time trajectories are updated
     genBuffer();
 }
@@ -306,12 +352,12 @@ void overlayUI::update_position(const std::vector<celestial> &bodies, double tra
     for (const auto &body : bodies)
     {
         glm::f64vec4 pos = cam.GetProjectionMat() * cam.GetViewMatrix() * getModelMat(body, traj_id) * glm::f64vec4(0.0, 0.0, 0.0, 1.0);
-        pos = pos / pos.w;
         if (pos.z < 0)
         {
             continue;
         }
-        // fmt::print("name: {}\npos: {} {} {}\n", body.name, pos.x, pos.y, pos.z);
+        pos = pos / pos.z;
+        // fmt::print("name: {}\npos: {} {} {} {}\n", body.name, pos.x, pos.y, pos.z, pos.w);
         labels.push_back({static_cast<GLint>((pos.x+1)/2*width), static_cast<GLint>((pos.y+1)/2*height), body.GM, body.name, true});
         // fmt::print("pos_pb: {} {}\n", static_cast<GLint>((pos.x+1)/2*width + 32), static_cast<GLint>((pos.y+1)/2*height - 8));
     }
