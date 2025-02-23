@@ -270,3 +270,7 @@ void writefile(const fs::path file_path, const std::string &content,
     ofile.flush();
     ofile.close();
 }
+
+bool is_Barycenter(const std::string &id) {
+    return !(id.length() > 1 || id[0]<'0' || id[0]>'9');
+}

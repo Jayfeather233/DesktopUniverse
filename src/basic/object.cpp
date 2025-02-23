@@ -4,8 +4,26 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <eigen3/Eigen/Core>
-
 #include <fmt/core.h>
+
+#include <ft2build.h>
+#include FT_FREETYPE_H
+
+template <int x, int y, typename T>
+void printMatrix(const glm::mat<x, y, T, glm::highp> &matrix)
+{
+    for (int i = 0; i < x; ++i)
+    {
+        for (int j = 0; j < y; ++j)
+        {
+            std::cout << std::setprecision(10) << matrix[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
+}
+
+void object::setUniform(std::shared_ptr<ogl::Program> s) {}
 
 sphere_object::sphere_object(float radius, unsigned int sectorCount, unsigned int stackCount)
     : radius(radius), sectorCount(sectorCount), stackCount(stackCount)
@@ -36,9 +54,9 @@ void sphere_object::genBuffer()
             vertices.push_back(z);
             // Optional: You can add normals if needed for lighting, but I'll keep it simple here
             // Color data (using a simple color gradient based on position)
-            float red = (x/radius + 1.0f) / 2.0f;   // Color gradient based on x position
-            float green = (y/radius + 1.0f) / 2.0f; // Color gradient based on y position
-            float blue = (z/radius + 1.0f) / 2.0f;  // Color gradient based on z position
+            float red = (x / radius + 1.0f) / 2.0f;   // Color gradient based on x position
+            float green = (y / radius + 1.0f) / 2.0f; // Color gradient based on y position
+            float blue = (z / radius + 1.0f) / 2.0f;  // Color gradient based on z position
             vertices.push_back(red);
             vertices.push_back(green);
             vertices.push_back(blue);
@@ -94,44 +112,49 @@ void sphere_object::genBuffer()
     indicesCount = indices.size();
 }
 
-void sphere_object::render()
+void sphere_object::render(std::shared_ptr<ogl::Program> s)
 {
     glBindVertexArray(vao);
     glDrawElements(GL_TRIANGLES, indicesCount, GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);
 }
 
-trajectory::trajectory() : vao(0), vbo(0), colorVbo(0), center(nullptr) {}
+trajectory::trajectory() : vao(0), vbo(0), colorVbo(0), center(nullptr), id(0.0) {}
 
 // Called to set or update the trajectories
-void trajectory::set_trajectories(const std::vector<celestial>& bodies)
+void trajectory::set_trajectories(const std::vector<celestial> &bodies)
 {
     // Clear old trajectory data
     trajectoryVertices.clear();
 
     // Process each celestial body and generate its trajectory
-    for (const auto& body : bodies) {
-        for (size_t i = 0; i < body.tr_trajectory.size() - 10; i+=10) { // t min
-            // fmt::print("{}\n", i);
-            const auto& start = body.tr_trajectory[i];
-            const auto& end = body.tr_trajectory[i + 10];
+    for (const auto &body : bodies)
+    {
+        if (body.radiusX > 0.0)
+        {
+            for (size_t i = (id/60); i < body.tr_trajectory.size() - 10; i += 10)
+            { // t min
+                // fmt::print("{}\n", i);
+                const auto &start = body.tr_trajectory[i];
+                const auto &end = body.tr_trajectory[i + 10];
 
-            // Create vertex positions for the trajectory lines
-            trajectoryVertices.push_back(start.x);
-            trajectoryVertices.push_back(start.y);
-            trajectoryVertices.push_back(start.z);
+                // Create vertex positions for the trajectory lines
+                trajectoryVertices.push_back(start.x);
+                trajectoryVertices.push_back(start.y);
+                trajectoryVertices.push_back(start.z);
 
-            trajectoryVertices.push_back(end.x);
-            trajectoryVertices.push_back(end.y);
-            trajectoryVertices.push_back(end.z);
-    
-            trajectoryColors.push_back(1.0f);
-            trajectoryColors.push_back(0.0f);
-            trajectoryColors.push_back(0.0f);
-    
-            trajectoryColors.push_back(1.0f);
-            trajectoryColors.push_back(1.0f);
-            trajectoryColors.push_back(1.0f);
+                trajectoryVertices.push_back(end.x);
+                trajectoryVertices.push_back(end.y);
+                trajectoryVertices.push_back(end.z);
+
+                trajectoryColors.push_back(1.0f);
+                trajectoryColors.push_back(0.0f);
+                trajectoryColors.push_back(0.0f);
+
+                trajectoryColors.push_back(1.0f);
+                trajectoryColors.push_back(1.0f);
+                trajectoryColors.push_back(1.0f);
+            }
         }
     }
 
@@ -144,7 +167,8 @@ void trajectory::set_trajectories(const std::vector<celestial>& bodies)
 void trajectory::genBuffer()
 {
     // Clean up old buffers if needed
-    if (vao != 0) {
+    if (vao != 0)
+    {
         glDeleteVertexArrays(1, &vao);
         glDeleteBuffers(1, &vbo);
         glDeleteBuffers(1, &colorVbo);
@@ -160,23 +184,24 @@ void trajectory::genBuffer()
     // Create the vertex buffer
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, trajectoryVertices.size() * sizeof(GLdouble), trajectoryVertices.data(), GL_STATIC_DRAW);
-    glVertexAttribLPointer(0, 3, GL_DOUBLE, sizeof(GLdouble)*3, (void*)0);
+    glVertexAttribLPointer(0, 3, GL_DOUBLE, sizeof(GLdouble) * 3, (void *)0);
     glEnableVertexAttribArray(0);
 
     glBindBuffer(GL_ARRAY_BUFFER, colorVbo);
     glBufferData(GL_ARRAY_BUFFER, trajectoryColors.size() * sizeof(GLfloat), trajectoryColors.data(), GL_STATIC_DRAW);
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*3, (void*)0);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 3, (void *)0);
     glEnableVertexAttribArray(1);
 
     glBindVertexArray(0); // Unbind VAO
     GLenum er = glGetError();
-    if (er != 0) {
+    if (er != 0)
+    {
         fmt::print("gen err: {}\n", er);
     }
 }
 
 // Render the trajectory lines
-void trajectory::render()
+void trajectory::render(std::shared_ptr<ogl::Program> s)
 {
     glLineWidth(2.0f);
 
@@ -184,19 +209,237 @@ void trajectory::render()
     glDrawArrays(GL_LINES, 0, trajectoryVertices.size());
 
     GLenum er = glGetError();
-    if (er != 0) {
+    if (er != 0)
+    {
         fmt::print("err: {}\n", er);
     }
 }
 
-void trajectory::setCenter(const celestial &c) {
+void trajectory::setCenter(const celestial &c)
+{
     center = &c;
 }
 
-const celestial& trajectory::getCenter() {
+const celestial &trajectory::getCenter()
+{
     return *center;
 }
 
-void trajectory::setID(double traj_id){
+void trajectory::setID(double traj_id)
+{
     id = traj_id;
+}
+
+void overlayUI::genBuffer()
+{
+    numSegments = 10;
+    float radius = 1.0f;
+
+    std::vector<GLfloat> circleVertices;
+    for (int i = 0; i < numSegments; i++)
+    {
+        float theta = 2.0f * 3.1415926f * float(i) / float(numSegments);
+        float x = radius * cosf(theta);
+        float y = radius * sinf(theta);
+        circleVertices.push_back(x);
+        circleVertices.push_back(y);
+        circleVertices.push_back(0.001f); // Assuming 2D circle, z = 0
+
+        circleVertices.push_back(0.9f);
+        circleVertices.push_back(0.9f);
+        circleVertices.push_back(0.9f); // color
+    }
+
+    glGenVertexArrays(1, &vao);
+    glGenBuffers(1, &vbo);
+
+    glBindVertexArray(vao);
+
+    // Create the vertex buffer
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+    glBufferData(GL_ARRAY_BUFFER, circleVertices.size() * sizeof(GLfloat), circleVertices.data(), GL_STATIC_DRAW);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 6, (void *)0);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 6, (void *)(sizeof(GLfloat) * 3));
+    glEnableVertexAttribArray(1);
+
+    glBindVertexArray(0); // Unbind VAO
+    GLenum er = glGetError();
+    if (er != 0)
+    {
+        fmt::print("gen err: {}\n", er);
+    }
+}
+void overlayUI::setUniform(std::shared_ptr<ogl::Program> s)
+{
+    s->setUniform("textColor", glm::vec3(0.9f, 0.9f, 0.9f));
+}
+void overlayUI::render(std::shared_ptr<ogl::Program> s)
+{
+    glBindVertexArray(vao);
+    for (const auto &label : labels)
+    {
+        if (label.is_show)
+        {
+            // fmt::print("label: {}\n", label.label);
+            auto m = glm::scale(glm::translate(glm::mat4(1.0f), glm::vec3(label.x, label.y, 0.0f)), glm::vec3(8, 8, 1));
+            s->setUniform("model", m);
+            glDrawArrays(GL_LINE_LOOP, 0, numSegments);
+        }
+    }
+    glBindVertexArray(0);
+}
+void overlayUI::render_text(int width, int height)
+{
+    for (const auto &label : labels)
+    {
+        if (label.is_show)
+        {
+            // fmt::print("render: {} {}\n", ((label.x+32)*2.0)/width-1.0, ((label.y-8)*2.0)/height-1.0);
+            ft.RenderText(label.label, ((label.x+16)*2.0)/width-1.0, ((label.y-4)*2.0)/height-1.0, 1.0f/width, 1.0f/height);
+        }
+    }
+}
+void overlayUI::update_position(const std::vector<celestial> &bodies, double traj_id, const ogl::Camera3D &cam, int width, int height)
+{
+    labels.clear();
+    for (const auto &body : bodies)
+    {
+        glm::f64vec4 pos = cam.GetProjectionMat() * cam.GetViewMatrix() * getModelMat(body, traj_id) * glm::f64vec4(0.0, 0.0, 0.0, 1.0);
+        pos = pos / pos.w;
+        if (pos.z < 0)
+        {
+            continue;
+        }
+        // fmt::print("name: {}\npos: {} {} {}\n", body.name, pos.x, pos.y, pos.z);
+        labels.push_back({static_cast<GLint>((pos.x+1)/2*width), static_cast<GLint>((pos.y+1)/2*height), body.GM, body.name, true});
+        // fmt::print("pos_pb: {} {}\n", static_cast<GLint>((pos.x+1)/2*width + 32), static_cast<GLint>((pos.y+1)/2*height - 8));
+    }
+    update_labels(width, height);
+}
+
+void overlayUI::update_labels(int width, int height)
+{
+    for (size_t i = 0; i < labels.size(); ++i)
+    {
+        for (size_t j = i + 1; j < labels.size(); ++j)
+        {
+            GLint diffX = abs(labels[i].x - labels[j].x), diffY = abs(labels[i].y - labels[j].y);
+            if (diffY < 30 && diffX <= 100)
+            {
+                if (labels[i].mass < labels[j].mass)
+                {
+                    labels[i].is_show = false;
+                }
+                else
+                {
+                    labels[j].is_show = false;
+                }
+            }
+        }
+    }
+}
+
+void FTtext::init()
+{
+    FT_Library ft;
+    if (FT_Init_FreeType(&ft))
+    {
+        fmt::print("ERROR::FREETYPE: Could not init FreeType Library\n");
+    }
+
+    FT_Face face;
+    if (FT_New_Face(ft, "fonts/inter_light.ttf", 0, &face))
+    {
+        fmt::print("ERROR::FREETYPE: Failed to load font\n");
+    }
+    FT_Set_Pixel_Sizes(face, 0, 32);
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 1); // disable byte-alignment restriction
+
+    for (unsigned char c = 0; c < 128; c++)
+    {
+        // load character glyph
+        if (FT_Load_Char(face, c, FT_LOAD_RENDER))
+        {
+            std::cout << "ERROR::FREETYTPE: Failed to load Glyph" << std::endl;
+            continue;
+        }
+        // generate texture
+        unsigned int texture;
+        glGenTextures(1, &texture);
+        glBindTexture(GL_TEXTURE_2D, texture);
+        glTexImage2D(
+            GL_TEXTURE_2D,
+            0,
+            GL_RED,
+            face->glyph->bitmap.width,
+            face->glyph->bitmap.rows,
+            0,
+            GL_RED,
+            GL_UNSIGNED_BYTE,
+            face->glyph->bitmap.buffer);
+        // set texture options
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        // now store character for later use
+        Character character = {
+            texture,
+            glm::ivec2(face->glyph->bitmap.width, face->glyph->bitmap.rows),
+            glm::ivec2(face->glyph->bitmap_left, face->glyph->bitmap_top),
+            face->glyph->advance.x};
+        Characters.insert(std::pair<char, Character>(c, character));
+    }
+    FT_Done_Face(face);
+    FT_Done_FreeType(ft);
+    glGenVertexArrays(1, &vao);
+    glGenBuffers(1, &vbo);
+    glBindVertexArray(vao);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 6 * 4, NULL, GL_DYNAMIC_DRAW);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 4 * sizeof(float), 0);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+}
+void FTtext::RenderText(std::string text, float x, float y, float scaleX, float scaleY)
+{
+    // activate corresponding render state
+    glActiveTexture(GL_TEXTURE0);
+    glBindVertexArray(vao);
+
+    // iterate through all characters
+    std::string::const_iterator c;
+    for (c = text.begin(); c != text.end(); c++)
+    {
+        Character ch = Characters[*c];
+
+        float xpos = x + ch.Bearing.x * scaleX;
+        float ypos = y - (ch.Size.y - ch.Bearing.y) * scaleY;
+
+        float w = ch.Size.x * scaleX;
+        float h = ch.Size.y * scaleY;
+        // update VBO for each character
+        float vertices[6][4] = {
+            {xpos, ypos + h, 0.0f, 0.0f},
+            {xpos, ypos, 0.0f, 1.0f},
+            {xpos + w, ypos, 1.0f, 1.0f},
+
+            {xpos, ypos + h, 0.0f, 0.0f},
+            {xpos + w, ypos, 1.0f, 1.0f},
+            {xpos + w, ypos + h, 1.0f, 0.0f}};
+        // render glyph texture over quad
+        glBindTexture(GL_TEXTURE_2D, ch.TextureID);
+        // update content of VBO memory
+        glBindBuffer(GL_ARRAY_BUFFER, vbo);
+        glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vertices), vertices);
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
+        // render quad
+        glDrawArrays(GL_TRIANGLES, 0, 6);
+        // now advance cursors for next glyph (note that advance is number of 1/64 pixels)
+        x += (ch.Advance >> 6) * scaleX; // bitshift by 6 to get value in pixels (2^6 = 64)
+    }
+    glBindVertexArray(0);
+    glBindTexture(GL_TEXTURE_2D, 0);
 }

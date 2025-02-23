@@ -14,3 +14,4 @@ void writefile(const fs::path file_path, const std::string &content, bool is_app
 std::fstream openfile(const fs::path file_path, const std::ios_base::openmode mode);
 std::vector<state> get_csv(const std::string &COMMAND, struct tm *utc_time);
 Json::Value string_to_json(const std::string &str);
+bool is_Barycenter(const std::string &id);

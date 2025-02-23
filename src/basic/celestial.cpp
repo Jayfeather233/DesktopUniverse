@@ -57,6 +57,13 @@ state getBodyState(double secs, const celestial &body)
     return interpolated;
 }
 
+glm::f64mat4 getModelMat(const celestial &body, double traj_id){
+    glm::f64mat4 m = glm::f64mat4(1.0); // Identity matrix
+    state bodystate = getBodyState(traj_id, body);
+    m = glm::translate(m, glm::f64vec3(bodystate.x, bodystate.y, bodystate.z));
+    return glm::scale(m, glm::f64vec3(body.radiusX, body.radiusY, body.radiusZ));
+}
+
 void calculateTr(std::vector<celestial> &all_bodies, const celestial &ref)
 {
     for (auto &u : all_bodies)

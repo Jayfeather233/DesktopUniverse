@@ -89,12 +89,15 @@ std::vector<state> get_csv_from_JPL(const std::string &COMMAND, const std::strin
         for (const auto &u : radius)
             J["celestial"][COMMAND]["radius"].append(u);
     }
-    else
+    else if(!is_Barycenter(COMMAND))
     {
         J["comet"][COMMAND]["name"] = name;
         J["comet"][COMMAND]["desc"] = desc;
         for (const auto &u : radius)
             J["comet"][COMMAND]["radius"].append(u);
+    } else {
+        J["barycenter"][COMMAND]["name"] = name;
+        J["barycenter"][COMMAND]["desc"] = desc;
     }
     writefile("./data/meta.json", J.toStyledString());
     writefile(filename, csv);

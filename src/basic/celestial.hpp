@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 
+#include "glm/ext.hpp"
+
 #define MINUTE_INTERVAL 1 // 1440 for a day
 
 struct state
@@ -26,5 +28,6 @@ struct celestial {
 bool operator < (const celestial &a, const celestial &b);
 
 state getBodyState(double secs, const celestial& body);
+glm::f64mat4 getModelMat(const celestial &body, double traj_id);
 
 void calculateTr(std::vector<celestial> &all_bodies, const celestial &ref);

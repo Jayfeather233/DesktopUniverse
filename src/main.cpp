@@ -24,11 +24,13 @@
 #include "glm/ext.hpp"
 
 int SCR_WIDTH = 1280, SCR_HEIGHT = 720;
-std::shared_ptr<ogl::Program> shaderProgram_body, shaderProgram_traj;
+std::shared_ptr<ogl::Program> shaderProgram_body, shaderProgram_traj, shaderProgram_flat, shaderProgram_text;
 ogl::Camera3D cam3d;
 
 sphere_object so;
 trajectory tr;
+overlayUI oUI;
+FTtext ft;
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height)
 {
@@ -36,6 +38,9 @@ void framebuffer_size_callback(GLFWwindow *window, int width, int height)
     SCR_WIDTH = width;
     SCR_HEIGHT = height;
     cam3d.updateSCRratio(width, height);
+    
+    // shaderProgram_text->bind();
+    // shaderProgram_text->setUniform("projection", glm::ortho(0.0f, static_cast<float>(SCR_WIDTH), 0.0f, static_cast<float>(SCR_HEIGHT)));
 }
 void processInput(GLFWwindow *window, float deltaTime);
 void scroll_callback(GLFWwindow *window, double xoffset, double yoffset);
@@ -86,7 +91,7 @@ void render_gui(double traj_id)
                 if (focus_id != i)
                 {
                     focus_id = i;
-                    cam3d.distance = bodies_csv[focus_id].radiusX * 5;
+                    if(bodies_csv[focus_id].radiusX > 0) cam3d.distance = bodies_csv[focus_id].radiusX * 5;
                     fmt::print("focus {}\n", bodies_csv[i].name);
                 }
             }
@@ -154,16 +159,12 @@ void render_all(std::vector<celestial> bodies_csv, double traj_id)
 {
     shaderProgram_body->bind();
     cam3d.SetUniform(shaderProgram_body);
-    glm::f64mat4 m;
     for (const auto &body : bodies_csv)
     {
-        m = glm::f64mat4(1.0); // Identity matrix
-        state bodystate = getBodyState(traj_id, body);
-        m = glm::translate(m, glm::f64vec3(bodystate.x, bodystate.y, bodystate.z));
-        m = glm::scale(m, glm::f64vec3(body.radiusX, body.radiusY, body.radiusZ));
-        // printMatrix(m);
-        shaderProgram_body->setUniform("model", m);
-        so.render();
+        if (body.radiusX > 0){
+            shaderProgram_body->setUniform("model", getModelMat(body, traj_id));
+            so.render(shaderProgram_body);
+        }
     }
     shaderProgram_traj->bind();
     // glDepthFunc(GL_ALWAYS);
@@ -174,7 +175,18 @@ void render_all(std::vector<celestial> bodies_csv, double traj_id)
         shaderProgram_traj->setUniform("offset", glm::dvec4(st.x, st.y, st.z, 0.0));
     }
     tr.setID(traj_id);
-    tr.render();
+    tr.render(shaderProgram_traj);
+    shaderProgram_flat->bind();
+    // glm::mat4 m = glm::mat4(1.0f);
+    // m[0][0] = 1.0f/SCR_WIDTH;
+    // m[1][1] = 1.0f/SCR_HEIGHT;
+    glm::mat4 m = glm::ortho(0.0f, static_cast<float>(SCR_WIDTH), 0.0f, static_cast<float>(SCR_HEIGHT));
+    shaderProgram_flat->setUniform("projection", m);
+    oUI.update_position(bodies_csv, traj_id, cam3d, SCR_WIDTH, SCR_HEIGHT);
+    oUI.render(shaderProgram_flat);
+    shaderProgram_text->bind();
+    oUI.setUniform(shaderProgram_text);
+    oUI.render_text(SCR_WIDTH, SCR_HEIGHT);
     // glDepthFunc(GL_LESS);
 }
 
@@ -186,7 +198,7 @@ int main()
         return 1;
     }
 
-    for (size_t unn = 0; unn < 3; ++unn)
+    for (size_t unn = 0; unn < 2; ++unn)
     {
         time_t now = time(NULL);
         struct tm utc_time = *gmtime(&now);
@@ -209,9 +221,13 @@ int main()
                 {
                     bodies_csv.push_back({obj, J2["celestial"][obj]["name"].asString(), J2["celestial"][obj]["desc"].asString(), J2["celestial"][obj]["GM"].asDouble(), J2["celestial"][obj]["radius"][0].asDouble(), J2["celestial"][obj]["radius"][1].asDouble(), J2["celestial"][obj]["radius"][2].asDouble(), get_csv(obj, &utc_time)});
                 }
-                else
+                else if (J2["comet"].isMember(obj))
                 {
-                    bodies_csv.push_back({obj, J2["comet"][obj]["name"].asString(), J2["comet"][obj]["desc"].asString(), 0, 1.0, 1.0, 1.0, get_csv(obj, &utc_time)});
+                    bodies_csv.push_back({obj, J2["comet"][obj]["name"].asString(), J2["comet"][obj]["desc"].asString(), 0, J2["comet"][obj]["radius"][0].asDouble(), J2["comet"][obj]["radius"][1].asDouble(), J2["comet"][obj]["radius"][2].asDouble(), get_csv(obj, &utc_time)});
+                }
+                else if (J2["barycenter"].isMember(obj))
+                {
+                    bodies_csv.push_back({obj, J2["barycenter"][obj]["name"].asString(), J2["barycenter"][obj]["desc"].asString(), 0, -1.0, -1.0, -1.0, get_csv(obj, &utc_time)});
                 }
             } else {
                 auto rr = get_csv(obj, &utc_time);
@@ -253,6 +269,8 @@ int main()
     }
     glEnable(GL_MULTISAMPLE);
     glEnable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO &io = ImGui::GetIO();
@@ -265,8 +283,14 @@ int main()
 
     shaderProgram_body = ogl::programFromFiles("./shaders", "simple_3D.vs", "simple.fs");
     shaderProgram_traj = ogl::programFromFiles("./shaders", "simple_traj.vs", "simple.fs");
+    shaderProgram_flat = ogl::programFromFiles("./shaders", "simple_flat.vs", "simple.fs");
+    shaderProgram_text = ogl::programFromFiles("./shaders", "simple_text.vs", "simple_text.fs");
+    shaderProgram_text->bind();
+    shaderProgram_text->setUniform("projection", glm::ortho(-1.0f, 1.0f, -1.0f, 1.0f));
     fmt::print("OpenGL Initialized\n");
     so.genBuffer();
+    oUI.genBuffer();
+    ft.init();
     fmt::print("Buffer Generated.\n");
 
     float lastTime = glfwGetTime();
