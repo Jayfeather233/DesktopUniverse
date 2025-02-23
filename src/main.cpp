@@ -296,6 +296,7 @@ int main()
     shaderProgram_text->bind();
     shaderProgram_text->setUniform("projection", glm::ortho(-1.0f, 1.0f, -1.0f, 1.0f));
     glm::mat4 m = glm::ortho(0.0f, static_cast<float>(SCR_WIDTH), 0.0f, static_cast<float>(SCR_HEIGHT));
+    shaderProgram_flat->bind();
     shaderProgram_flat->setUniform("projection", m);
     fmt::print("OpenGL Initialized\n");
     so.genBuffer();

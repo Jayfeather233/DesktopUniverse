@@ -73,6 +73,6 @@ void calculateTr(std::vector<celestial> &all_bodies, const celestial &ref)
         {
             u.tr_trajectory.push_back(u.trajectory[i] - ref.trajectory[i]);
         }
-        fmt::print("size: {}\n", u.tr_trajectory.size());
+        // fmt::print("size: {}\n", u.tr_trajectory.size());
     }
 }

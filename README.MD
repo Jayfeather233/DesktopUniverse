@@ -7,7 +7,8 @@ Now feature in:
 - add more celestial use naif (on dev, directly add into `./data/tracking_bodies.json` works fine)
 - showing trajectories
 - change reference frame
-- change focus body.
+- change focus body
+- display body names
 
 How to use:
 
@@ -30,11 +31,18 @@ curl
 OpenGL with glew glfw3
 fmt: https://github.com/fmtlib/fmt
 Eigen3: https://github.com/OPM/eigen3
+freetype
 ```
 
 Note:
 - your OpenGL must support GLSL version 4.0 or higher. I use 4.3.
 - wish your graphic card can handle fp64 calculation. ;) I haven't figure out how to compress into fp32.
+
+## camera control
+
+Use keyboard `ijkl` to rotate, `nm` for zoom in/out, mouse wheel for change FoV.
+
+direct mouse control will be add in future.
 
 ## Thanks
 
@@ -42,13 +50,15 @@ celestial position data comes from: [JPL SSD](https://ssd.jpl.nasa.gov/)
 
 GUI: [ImGui](https://github.com/ocornut/imgui) (directly included in my repo, for a release version 1.91.8, specific for glew+glfw3)
 
+[inter light font](https://github.com/rsms/inter)
+
 ## Showcases
 
 Jupiter System:
 
 JCI:
 ![](./img/j_j.png)
-SCI():
+SCI:
 ![](./img/s_j.png)
 IO(Jupiter)-CI:
-![](./img/IO_IO.png)
+![](./img/io_j.png)
