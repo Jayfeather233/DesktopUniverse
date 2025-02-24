@@ -100,18 +100,14 @@ void convert_csv(std::string filename)
     save_csvbin(ret, filename + ".bin");
 }
 
-std::vector<state> get_csv_from_JPL(const std::string &COMMAND, const std::string &filename)
-{
+std::vector<state> get_state_from_content(const std::string &COMMAND, const std::string &content, const std::string &filename){
     std::string desc, csv, name;
     double GM = 0.0;
     bool is_big;
     Eigen::Vector3d radius(1, 1, 1);
-    {
-        std::string content = download_file_JPL(COMMAND);
-        is_big = decode_JPL_result(content, name, desc, csv, GM, radius);
-    }
+    is_big = decode_JPL_result(content, name, desc, csv, GM, radius);
     Json::Value J = string_to_json(readfile("./data/meta.json"));
-    if (is_big)
+    if (is_big && !J["celestial"].isMember(COMMAND))
     {
         J["celestial"][COMMAND]["name"] = name;
         J["celestial"][COMMAND]["desc"] = desc;
@@ -119,14 +115,14 @@ std::vector<state> get_csv_from_JPL(const std::string &COMMAND, const std::strin
         for (const auto &u : radius)
             J["celestial"][COMMAND]["radius"].append(u);
     }
-    else if (!is_Barycenter(COMMAND))
+    else if (!is_Barycenter(COMMAND) && !J["comet"].isMember(COMMAND))
     {
         J["comet"][COMMAND]["name"] = name;
         J["comet"][COMMAND]["desc"] = desc;
         for (const auto &u : radius)
             J["comet"][COMMAND]["radius"].append(u);
     }
-    else
+    else if (is_Barycenter(COMMAND) && !J["barycenter"].isMember(COMMAND))
     {
         J["barycenter"][COMMAND]["name"] = name;
         J["barycenter"][COMMAND]["desc"] = desc;
@@ -138,40 +134,19 @@ std::vector<state> get_csv_from_JPL(const std::string &COMMAND, const std::strin
     return ret;
 }
 
+std::vector<state> get_csv_from_JPL(const std::string &COMMAND, const std::string &filename_csv)
+{
+    std::string content = download_file_JPL(COMMAND);
+    return get_state_from_content(COMMAND, content, filename_csv);
+}
+
 std::vector<state> get_csv_from_file(const std::string &COMMAND, const std::string &filename_txt, const std::string &filename_csv)
 {
-    std::string desc, csv, name;
-    double GM = 0.0;
-    bool is_big;
-    Eigen::Vector3d radius(1, 1, 1);
-    {
-        std::ifstream ifs(filename_txt);
-        std::ostringstream oss;
-        oss << ifs.rdbuf();
-        std::string content = oss.str();
-        is_big = decode_JPL_result(content, name, desc, csv, GM, radius);
-    }
-    Json::Value J = string_to_json(readfile("./data/meta.json"));
-    if (is_big && !J["celestial"].isMember(COMMAND))
-    {
-        J["celestial"][COMMAND]["name"] = name;
-        J["celestial"][COMMAND]["desc"] = desc;
-        J["celestial"][COMMAND]["GM"] = GM;
-        for (const auto &u : radius)
-            J["celestial"][COMMAND]["radius"].append(u);
-    }
-    else if (!J["comet"].isMember(COMMAND))
-    {
-        J["comet"][COMMAND]["name"] = name;
-        J["comet"][COMMAND]["desc"] = desc;
-        for (const auto &u : radius)
-            J["comet"][COMMAND]["radius"].append(u);
-    }
-    writefile("./data/meta.json", J.toStyledString());
-    std::istringstream iss(csv);
-    auto ret = istream2state(iss);
-    save_csvbin(ret, filename_csv + ".bin");
-    return ret;
+    std::ifstream ifs(filename_txt);
+    std::ostringstream oss;
+    oss << ifs.rdbuf();
+    std::string content = oss.str();
+    return get_state_from_content(COMMAND, content, filename_csv);
 }
 
 std::vector<state> get_csv(const std::string &COMMAND, struct tm *utc_time)
@@ -201,7 +176,7 @@ std::vector<state> get_csv(const std::string &COMMAND, struct tm *utc_time)
     {
         fmt::print("Missing csv for {}, ", COMMAND);
         fmt::print("found data file, restoring...\n");
-        auto ret = get_csv_from_file(COMMAND, filename, filename);
+        auto ret = get_csv_from_file(COMMAND, filename, fmt::format("./data/{}_{}/{}.csv", tmy, tmm, to_filename(COMMAND)));
         // fs::remove(filename);
         return ret;
     }
