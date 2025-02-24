@@ -9,11 +9,11 @@ bool operator<(const celestial &a, const celestial &b)
 
 state operator-(const state &a, const state &b)
 {
-    return {a.x - b.x, a.y - b.y, a.z - b.z, a.vx - b.vx, a.vy - b.vy, a.vz - b.vz};
+    return {a.JDTDB - b.JDTDB, a.x - b.x, a.y - b.y, a.z - b.z, a.vx - b.vx, a.vy - b.vy, a.vz - b.vz};
 }
 state operator+(const state &a, const state &b)
 {
-    return {a.x + b.x, a.y + b.y, a.z + b.z, a.vx + b.vx, a.vy + b.vy, a.vz + b.vz};
+    return {a.JDTDB + b.JDTDB, a.x + b.x, a.y + b.y, a.z + b.z, a.vx + b.vx, a.vy + b.vy, a.vz + b.vz};
 }
 
 state getBodyState(double secs, const celestial &body)
@@ -22,7 +22,7 @@ state getBodyState(double secs, const celestial &body)
 
     if (trajectory.empty())
     {
-        return {0, 0, 0, 0, 0, 0};
+        return {0, 0, 0, 0, 0, 0, 0};
     }
 
     // Check if the requested time is before the first trajectory point or after the last one
@@ -46,6 +46,7 @@ state getBodyState(double secs, const celestial &body)
     double t = (secs - i * 60) / 60; // Time fraction between start and end
 
     state interpolated;
+    interpolated.JDTDB = start.JDTDB + t * (end.JDTDB - start.JDTDB);
     interpolated.x = start.x + t * (end.x - start.x);
     interpolated.y = start.y + t * (end.y - start.y);
     interpolated.z = start.z + t * (end.z - start.z);

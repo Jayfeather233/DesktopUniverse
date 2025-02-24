@@ -31,6 +31,18 @@ std::string to_filename(const std::string &filename)
     return uu;
 }
 
+std::vector<state> istream2statebin(std::istream &is)
+{
+    std::vector<state> ret;
+    while (is.peek() != EOF)
+    {
+        state s;
+        is.read(reinterpret_cast<char *>(&s), sizeof(state));
+        ret.push_back(s);
+    }
+    return ret;
+}
+
 std::vector<state> istream2state(std::istream &is, bool read_header = true)
 {
     std::string line;
@@ -46,6 +58,7 @@ std::vector<state> istream2state(std::istream &is, bool read_header = true)
 
         // Skip JDTDB column (first column), we don't need it
         std::getline(ss, token, ','); // JDTDB
+        s.JDTDB = std::stod(token);
 
         // Skip Calendar Date (TDB) column (second column), we don't need it
         std::getline(ss, token, ','); // Calendar Date (TDB)
@@ -70,6 +83,23 @@ std::vector<state> istream2state(std::istream &is, bool read_header = true)
     return ret;
 }
 
+void save_csvbin(const std::vector<state> &ret, const std::string &filename)
+{
+    std::ofstream
+        ofile(filename, std::ios::binary);
+    for (const auto &s : ret)
+    {
+        ofile.write(reinterpret_cast<const char *>(&s), sizeof(s));
+    }
+}
+
+void convert_csv(std::string filename)
+{
+    std::ifstream file(filename);
+    auto ret = istream2state(file);
+    save_csvbin(ret, filename + ".bin");
+}
+
 std::vector<state> get_csv_from_JPL(const std::string &COMMAND, const std::string &filename)
 {
     std::string desc, csv, name;
@@ -89,20 +119,23 @@ std::vector<state> get_csv_from_JPL(const std::string &COMMAND, const std::strin
         for (const auto &u : radius)
             J["celestial"][COMMAND]["radius"].append(u);
     }
-    else if(!is_Barycenter(COMMAND))
+    else if (!is_Barycenter(COMMAND))
     {
         J["comet"][COMMAND]["name"] = name;
         J["comet"][COMMAND]["desc"] = desc;
         for (const auto &u : radius)
             J["comet"][COMMAND]["radius"].append(u);
-    } else {
+    }
+    else
+    {
         J["barycenter"][COMMAND]["name"] = name;
         J["barycenter"][COMMAND]["desc"] = desc;
     }
     writefile("./data/meta.json", J.toStyledString());
-    writefile(filename, csv);
     std::istringstream iss(csv);
-    return istream2state(iss);
+    auto ret = istream2state(iss);
+    save_csvbin(ret, filename + ".bin");
+    return ret;
 }
 
 std::vector<state> get_csv_from_file(const std::string &COMMAND, const std::string &filename_txt, const std::string &filename_csv)
@@ -135,9 +168,10 @@ std::vector<state> get_csv_from_file(const std::string &COMMAND, const std::stri
             J["comet"][COMMAND]["radius"].append(u);
     }
     writefile("./data/meta.json", J.toStyledString());
-    writefile(filename_csv, csv);
     std::istringstream iss(csv);
-    return istream2state(iss);
+    auto ret = istream2state(iss);
+    save_csvbin(ret, filename_csv + ".bin");
+    return ret;
 }
 
 std::vector<state> get_csv(const std::string &COMMAND, struct tm *utc_time)
@@ -150,26 +184,35 @@ std::vector<state> get_csv(const std::string &COMMAND, struct tm *utc_time)
     int tmy = utc_time->tm_year + 1900;
     int tmm = utc_time->tm_mon + 1;
 
-    std::string filename = fmt::format("./data/{}_{}/{}.csv", tmy, tmm, to_filename(COMMAND));
-    try
+    std::string filename = fmt::format("./data/{}_{}/{}.csv.bin", tmy, tmm, to_filename(COMMAND));
+    if (fs::exists(filename))
+    {
+        std::fstream f = openfile(filename, std::ios_base::in | std::ios::binary);
+        return istream2statebin(f);
+    }
+    else if (fs::exists(filename = fmt::format("./data/{}_{}/{}.csv", tmy, tmm, to_filename(COMMAND))))
     {
         std::fstream f = openfile(filename, std::ios_base::in);
-        return istream2state(f);
+        convert_csv(filename);
+        fs::remove(filename);
+        return get_csv(COMMAND, utc_time);
     }
-    catch (...)
+    else if (fs::exists(filename = fmt::format("./data/{}_{}/{}.txt", tmy, tmm, to_filename(COMMAND))))
     {
         fmt::print("Missing csv for {}, ", COMMAND);
-        if (fs::exists(fmt::format("./data/{}_{}/{}.txt", tmy, tmm, to_filename(COMMAND))))
-        {
-            fmt::print("found data file, restoring...\n");
-            return get_csv_from_file(COMMAND, fmt::format("./data/{}_{}/{}.txt", tmy, tmm, to_filename(COMMAND)), filename);
-        }
-        else
-        {
-            fmt::print("downloading...\n");
-            std::vector<state> ret = get_csv_from_JPL(COMMAND, filename);
-            fs::rename("./results.txt", fmt::format("./data/{}_{}/{}.txt", tmy, tmm, to_filename(COMMAND)));
-            return ret;
-        }
+        fmt::print("found data file, restoring...\n");
+        auto ret = get_csv_from_file(COMMAND, filename, filename);
+        // fs::remove(filename);
+        return ret;
+    }
+    else
+    {
+        filename = fmt::format("./data/{}_{}/{}.csv", tmy, tmm, to_filename(COMMAND));
+        fmt::print("Missing csv for {}, ", COMMAND);
+        fmt::print("downloading...\n");
+        std::vector<state> ret = get_csv_from_JPL(COMMAND, filename);
+        // fs::remove("./results.txt");
+        fs::rename("./results.txt", fmt::format("./data/{}_{}/{}.txt", tmy, tmm, to_filename(COMMAND)));
+        return ret;
     }
 }

@@ -9,6 +9,7 @@
 
 struct state
 {
+    double JDTDB;
     double x, y, z;
     double vx, vy, vz;
 };

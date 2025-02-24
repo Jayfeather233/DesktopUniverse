@@ -50,6 +50,7 @@ std::string download_file_JPL(const std::string &COMMAND)
     std::ostringstream oss;
     oss << ifs.rdbuf();
     std::string u(oss.str());
+    fs::remove("input_file.txt");
     return u;
 }
 
