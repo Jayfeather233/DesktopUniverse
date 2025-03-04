@@ -149,8 +149,12 @@ std::vector<state> get_csv_from_file(const std::string &COMMAND, const std::stri
     return get_state_from_content(COMMAND, content, filename_csv);
 }
 
-std::vector<state> get_csv(const std::string &COMMAND, struct tm *utc_time)
+std::vector<state> _get_csv(const std::string &COMMAND, struct tm *utc_time)
 {
+    if (!fs::exists("./data"))
+    {
+        fs::create_directory("./data");
+    }
     // time_t now = time(NULL);
     // struct tm *utc_time = gmtime(&now);
     utc_time->tm_sec += 69;
@@ -158,6 +162,11 @@ std::vector<state> get_csv(const std::string &COMMAND, struct tm *utc_time)
 
     int tmy = utc_time->tm_year + 1900;
     int tmm = utc_time->tm_mon + 1;
+
+    if (!fs::exists(fmt::format("./data/{}_{}/", tmy, tmm)))
+    {
+        fs::create_directory(fmt::format("./data/{}_{}/", tmy, tmm));
+    }
 
     std::string filename = fmt::format("./data/{}_{}/{}.csv.bin", tmy, tmm, to_filename(COMMAND));
     if (fs::exists(filename))
@@ -190,4 +199,10 @@ std::vector<state> get_csv(const std::string &COMMAND, struct tm *utc_time)
         fs::rename("./results.txt", fmt::format("./data/{}_{}/{}.txt", tmy, tmm, to_filename(COMMAND)));
         return ret;
     }
+}
+
+std::vector<state> get_csv(const std::string &COMMAND, struct tm *utc_time) {
+    auto ret = _get_csv(COMMAND, utc_time);
+    ret.pop_back();
+    return ret;
 }

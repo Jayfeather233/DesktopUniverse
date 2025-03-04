@@ -6,17 +6,21 @@ bool operator<(const celestial &a, const celestial &b)
 {
     return a.id < b.id;
 }
+bool operator<(const state &a, const state &b)
+{
+    return a.JDTDB < b.JDTDB;
+}
 
 state operator-(const state &a, const state &b)
 {
-    return {a.JDTDB - b.JDTDB, a.x - b.x, a.y - b.y, a.z - b.z, a.vx - b.vx, a.vy - b.vy, a.vz - b.vz};
+    return {a.JDTDB, a.x - b.x, a.y - b.y, a.z - b.z, a.vx - b.vx, a.vy - b.vy, a.vz - b.vz};
 }
 state operator+(const state &a, const state &b)
 {
-    return {a.JDTDB + b.JDTDB, a.x + b.x, a.y + b.y, a.z + b.z, a.vx + b.vx, a.vy + b.vy, a.vz + b.vz};
+    return {a.JDTDB, a.x + b.x, a.y + b.y, a.z + b.z, a.vx + b.vx, a.vy + b.vy, a.vz + b.vz};
 }
 
-state getBodyState(double secs, const celestial &body)
+state getBodyState(double TDB, const celestial &body)
 {
     const auto &trajectory = body.trajectory;
 
@@ -26,24 +30,24 @@ state getBodyState(double secs, const celestial &body)
     }
 
     // Check if the requested time is before the first trajectory point or after the last one
-    if (secs <= 0)
+    if (TDB <= 0)
     {
         return trajectory.front();
     }
-    if (secs >= trajectory.size() * 60)
+    if ((TDB-=trajectory[0].JDTDB) >= trajectory.size() * 60)
     {
         return trajectory.back();
     }
 
     // Find the two points surrounding the time `secs`
-    size_t i = static_cast<size_t>((secs + 30) / 60);
+    size_t i = static_cast<size_t>(std::ceil(TDB / 60));
 
     // The two points for interpolation
     state start = trajectory[i - 1];
     state end = trajectory[i];
 
     // Interpolate between start and end
-    double t = (secs - i * 60) / 60; // Time fraction between start and end
+    double t = (TDB - i * 60) / 60; // Time fraction between start and end
 
     state interpolated;
     interpolated.JDTDB = start.JDTDB + t * (end.JDTDB - start.JDTDB);
@@ -58,9 +62,9 @@ state getBodyState(double secs, const celestial &body)
     return interpolated;
 }
 
-glm::f64mat4 getModelMat(const celestial &body, double traj_id){
+glm::f64mat4 getModelMat(const celestial &body, double TDB){
     glm::f64mat4 m = glm::f64mat4(1.0); // Identity matrix
-    state bodystate = getBodyState(traj_id, body);
+    state bodystate = getBodyState(TDB, body);
     m = glm::translate(m, glm::f64vec3(bodystate.x, bodystate.y, bodystate.z));
     return glm::scale(m, glm::f64vec3(body.radiusX, body.radiusY, body.radiusZ));
 }

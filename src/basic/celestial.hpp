@@ -2,6 +2,8 @@
 
 #include <string>
 #include <vector>
+#include <iostream>
+#include <iomanip>
 
 #include "glm/ext.hpp"
 
@@ -28,7 +30,31 @@ struct celestial {
 
 bool operator < (const celestial &a, const celestial &b);
 
-state getBodyState(double secs, const celestial& body);
-glm::f64mat4 getModelMat(const celestial &body, double traj_id);
+state getBodyState(double TDB, const celestial& body);
+glm::f64mat4 getModelMat(const celestial &body, double TDB);
 
 void calculateTr(std::vector<celestial> &all_bodies, const celestial &ref);
+
+template <int x, int y, typename T>
+void printMatrix(const glm::mat<x, y, T, glm::highp> &matrix)
+{
+    for (int i = 0; i < x; ++i)
+    {
+        for (int j = 0; j < y; ++j)
+        {
+            std::cout << std::setprecision(10) << matrix[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
+}
+
+template <int x, typename T>
+void printVec(const glm::vec<x, T, glm::highp> &vec)
+{
+    for (int i = 0; i < x; ++i)
+    {
+        std::cout << vec[i] << " ";
+    }
+    std::cout << std::endl;
+}

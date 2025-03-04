@@ -9,8 +9,9 @@
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
-template<glm::length_t L, typename T, glm::qualifier Q>
-T calculateAngle(const glm::vec<L, T, Q>& vec1, const glm::vec<L, T, Q>& vec2) {
+template <glm::length_t L, typename T, glm::qualifier Q>
+T calculateAngle(const glm::vec<L, T, Q> &vec1, const glm::vec<L, T, Q> &vec2)
+{
     // Normalize the vectors
     glm::vec<L, T, Q> normVec1 = glm::normalize(vec1);
     glm::vec<L, T, Q> normVec2 = glm::normalize(vec2);
@@ -29,21 +30,7 @@ T calculateAngle(const glm::vec<L, T, Q>& vec1, const glm::vec<L, T, Q>& vec2) {
     return angle; // in radians
 }
 
-template <int x, int y, typename T>
-void printMatrix(const glm::mat<x, y, T, glm::highp> &matrix)
-{
-    for (int i = 0; i < x; ++i)
-    {
-        for (int j = 0; j < y; ++j)
-        {
-            std::cout << std::setprecision(10) << matrix[i][j] << " ";
-        }
-        std::cout << std::endl;
-    }
-    std::cout << std::endl;
-}
-
-void object::setUniform(std::shared_ptr<ogl::Program> s) {}
+void object::setUniform(std::shared_ptr<ogl::Program> s) const {}
 
 sphere_object::sphere_object(float radius, unsigned int sectorCount, unsigned int stackCount)
     : radius(radius), sectorCount(sectorCount), stackCount(stackCount)
@@ -132,7 +119,7 @@ void sphere_object::genBuffer()
     indicesCount = indices.size();
 }
 
-void sphere_object::render(std::shared_ptr<ogl::Program> s)
+void sphere_object::render(std::shared_ptr<ogl::Program> s) const
 {
     glBindVertexArray(vao);
     glDrawElements(GL_TRIANGLES, indicesCount, GL_UNSIGNED_INT, 0);
@@ -152,16 +139,20 @@ void trajectory::set_trajectories(const std::vector<celestial> &bodies)
     {
         if (body.radiusX > 0.0)
         {
-            size_t las = (id/60);
+            fmt::print("id {}, jd: {}", id, body.trajectory[0].JDTDB);
+            // size_t begin_id = ((id-body.trajectory[0].JDTDB)/60);
+            size_t begin_id = 0;
+            size_t las = begin_id;
+            fmt::print("las: {}\n", las);
             for (size_t i = las; i < body.tr_trajectory.size(); ++i)
             { // t min
                 // fmt::print("{}\n", i);
                 const auto &start = body.tr_trajectory[las];
                 const auto &end = body.tr_trajectory[i];
-                
+
                 const double two_pi = glm::pi<double>() * 2.0;
-                if (calculateAngle(glm::dvec3(start.vx, start.vy, start.vz), glm::dvec3(end.vx, end.vy, end.vz)) < two_pi/40 /*&& i - las < 300*/)
-                continue;
+                if (calculateAngle(glm::dvec3(start.vx, start.vy, start.vz), glm::dvec3(end.vx, end.vy, end.vz)) < two_pi / 60 /*&& i - las < 300*/)
+                    continue;
 
                 las = i;
 
@@ -182,9 +173,10 @@ void trajectory::set_trajectories(const std::vector<celestial> &bodies)
                 trajectoryColors.push_back(1.0f);
                 trajectoryColors.push_back(1.0f);
             }
-            if (las == static_cast<size_t>(id/60)) {
+            if (las == begin_id)
+            {
                 const auto &start = body.tr_trajectory[las];
-                const auto &end = *(body.tr_trajectory.end()-1);
+                const auto &end = *(body.tr_trajectory.end() - 1);
                 trajectoryVertices.push_back(start.x);
                 trajectoryVertices.push_back(start.y);
                 trajectoryVertices.push_back(start.z);
@@ -204,7 +196,7 @@ void trajectory::set_trajectories(const std::vector<celestial> &bodies)
         }
     }
 
-    fmt::print("gen buffer: {}\n", trajectoryVertices.size()/3);
+    fmt::print("gen buffer: {}\n", trajectoryVertices.size() / 3);
     // Re-generate buffers every time trajectories are updated
     genBuffer();
 }
@@ -247,18 +239,18 @@ void trajectory::genBuffer()
 }
 
 // Render the trajectory lines
-void trajectory::render(std::shared_ptr<ogl::Program> s)
+void trajectory::render(std::shared_ptr<ogl::Program> s) const
 {
     glLineWidth(2.0f);
 
     glBindVertexArray(vao);
     glDrawArrays(GL_LINES, 0, trajectoryVertices.size());
 
-    GLenum er = glGetError();
-    if (er != 0)
-    {
-        fmt::print("err: {}\n", er);
-    }
+    // GLenum er = glGetError();
+    // if (er != 0)
+    // {
+    //     fmt::print("err: {}\n", er);
+    // }
 }
 
 void trajectory::setCenter(const celestial &c)
@@ -271,9 +263,9 @@ const celestial &trajectory::getCenter()
     return *center;
 }
 
-void trajectory::setID(double traj_id)
+void trajectory::setID(double TDB)
 {
-    id = traj_id;
+    id = TDB;
 }
 
 void overlayUI::genBuffer()
@@ -316,11 +308,11 @@ void overlayUI::genBuffer()
         fmt::print("gen err: {}\n", er);
     }
 }
-void overlayUI::setUniform(std::shared_ptr<ogl::Program> s)
+void overlayUI::setUniform(std::shared_ptr<ogl::Program> s) const
 {
     s->setUniform("textColor", glm::vec3(0.9f, 0.9f, 0.9f));
 }
-void overlayUI::render(std::shared_ptr<ogl::Program> s)
+void overlayUI::render(std::shared_ptr<ogl::Program> s) const
 {
     glBindVertexArray(vao);
     for (const auto &label : labels)
@@ -335,30 +327,30 @@ void overlayUI::render(std::shared_ptr<ogl::Program> s)
     }
     glBindVertexArray(0);
 }
-void overlayUI::render_text(int width, int height)
+void overlayUI::render_text(const FTtext &ft, int width, int height)
 {
     for (const auto &label : labels)
     {
         if (label.is_show)
         {
             // fmt::print("render: {} {}\n", ((label.x+32)*2.0)/width-1.0, ((label.y-8)*2.0)/height-1.0);
-            ft.RenderText(label.label, ((label.x+16)*2.0)/width-1.0, ((label.y-4)*2.0)/height-1.0, 1.0f/width, 1.0f/height);
+            ft.RenderText(label.label, ((label.x + 16) * 2.0) / width - 1.0, ((label.y - 4) * 2.0) / height - 1.0, 1.0f / width, 1.0f / height);
         }
     }
 }
-void overlayUI::update_position(const std::vector<celestial> &bodies, double traj_id, const ogl::Camera3D &cam, int width, int height)
+void overlayUI::update_position(const std::vector<celestial> &bodies, double TDB, const ogl::Camera3D &cam, int width, int height)
 {
     labels.clear();
     for (const auto &body : bodies)
     {
-        glm::f64vec4 pos = cam.GetProjectionMat() * cam.GetViewMatrix() * getModelMat(body, traj_id) * glm::f64vec4(0.0, 0.0, 0.0, 1.0);
+        glm::f64vec4 pos = cam.GetProjectionMat() * cam.GetViewMatrix() * getModelMat(body, TDB) * glm::f64vec4(0.0, 0.0, 0.0, 1.0);
         if (pos.z < 0)
         {
             continue;
         }
         pos = pos / pos.z;
         // fmt::print("name: {}\npos: {} {} {} {}\n", body.name, pos.x, pos.y, pos.z, pos.w);
-        labels.push_back({static_cast<GLint>((pos.x+1)/2*width), static_cast<GLint>((pos.y+1)/2*height), body.GM, body.name, true});
+        labels.push_back({static_cast<GLint>((pos.x + 1) / 2 * width), static_cast<GLint>((pos.y + 1) / 2 * height), body.GM, body.name, true});
         // fmt::print("pos_pb: {} {}\n", static_cast<GLint>((pos.x+1)/2*width + 32), static_cast<GLint>((pos.y+1)/2*height - 8));
     }
     update_labels(width, height);
@@ -449,7 +441,7 @@ void FTtext::init()
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 }
-void FTtext::RenderText(std::string text, float x, float y, float scaleX, float scaleY)
+void FTtext::RenderText(std::string text, float x, float y, float scaleX, float scaleY) const
 {
     // activate corresponding render state
     glActiveTexture(GL_TEXTURE0);
@@ -459,7 +451,7 @@ void FTtext::RenderText(std::string text, float x, float y, float scaleX, float 
     std::string::const_iterator c;
     for (c = text.begin(); c != text.end(); c++)
     {
-        Character ch = Characters[*c];
+        const Character &ch = Characters.find(*c)->second;
 
         float xpos = x + ch.Bearing.x * scaleX;
         float ypos = y - (ch.Size.y - ch.Bearing.y) * scaleY;

@@ -53,9 +53,6 @@
 			[
 				2439400.0,
 				2439400.0,
-				2439400.0,
-				2439400.0,
-				2439400.0,
 				2439400.0
 			]
 		},
@@ -66,12 +63,6 @@
 			"name" : "Sun (10)",
 			"radius" : 
 			[
-				695700000.0,
-				695700000.0,
-				695700000.0,
-				695700000.0,
-				695700000.0,
-				695700000.0,
 				695700000.0,
 				695700000.0,
 				695700000.0
@@ -86,12 +77,6 @@
 			[
 				2439400.0,
 				2439400.0,
-				2439400.0,
-				2439400.0,
-				2439400.0,
-				2439400.0,
-				2439400.0,
-				2439400.0,
 				2439400.0
 			]
 		},
@@ -102,9 +87,6 @@
 			"name" : "Venus Barycenter (299)",
 			"radius" : 
 			[
-				6051840.0,
-				6051840.0,
-				6051840.0,
 				6051840.0,
 				6051840.0,
 				6051840.0
@@ -119,12 +101,6 @@
 			[
 				6051840.0,
 				6051840.0,
-				6051840.0,
-				6051840.0,
-				6051840.0,
-				6051840.0,
-				6051840.0,
-				6051840.0,
 				6051840.0
 			]
 		},
@@ -135,12 +111,6 @@
 			"name" : "Moon (301)",
 			"radius" : 
 			[
-				1737530.0,
-				1737530.0,
-				1737530.0,
-				1737530.0,
-				1737530.0,
-				1737530.0,
 				1737530.0,
 				1737530.0,
 				1737530.0
@@ -155,12 +125,6 @@
 			[
 				6371010.0,
 				6371010.0,
-				6371010.0,
-				6371010.0,
-				6371010.0,
-				6371010.0,
-				6371010.0,
-				6371010.0,
 				6371010.0
 			]
 		},
@@ -171,12 +135,6 @@
 			"name" : "Phobos (401)",
 			"radius" : 
 			[
-				13100.0,
-				11100.0,
-				9300.0,
-				13100.0,
-				11100.0,
-				9300.0,
 				13100.0,
 				11100.0,
 				9300.0
@@ -191,12 +149,6 @@
 			[
 				7800.0,
 				6000.0,
-				5100.0,
-				7800.0,
-				6000.0,
-				5100.0,
-				7800.0,
-				6000.0,
 				5100.0
 			]
 		},
@@ -207,12 +159,6 @@
 			"name" : "Mars (499)",
 			"radius" : 
 			[
-				3389920.0,
-				3389920.0,
-				3389920.0,
-				3389920.0,
-				3389920.0,
-				3389920.0,
 				3389920.0,
 				3389920.0,
 				3389920.0
@@ -227,12 +173,6 @@
 			[
 				1821490.0,
 				1821490.0,
-				1821490.0,
-				1821490.0,
-				1821490.0,
-				1821490.0,
-				1821490.0,
-				1821490.0,
 				1821490.0
 			]
 		},
@@ -243,12 +183,6 @@
 			"name" : "Europa (502)",
 			"radius" : 
 			[
-				1560800.0,
-				1560800.0,
-				1560800.0,
-				1560800.0,
-				1560800.0,
-				1560800.0,
 				1560800.0,
 				1560800.0,
 				1560800.0
@@ -263,12 +197,6 @@
 			[
 				2631200.0,
 				2631200.0,
-				2631200.0,
-				2631200.0,
-				2631200.0,
-				2631200.0,
-				2631200.0,
-				2631200.0,
 				2631200.0
 			]
 		},
@@ -279,12 +207,6 @@
 			"name" : "Callisto (504)",
 			"radius" : 
 			[
-				2410300.0,
-				2410300.0,
-				2410300.0,
-				2410300.0,
-				2410300.0,
-				2410300.0,
 				2410300.0,
 				2410300.0,
 				2410300.0
@@ -299,12 +221,6 @@
 			[
 				83500.0,
 				83500.0,
-				83500.0,
-				83500.0,
-				83500.0,
-				83500.0,
-				83500.0,
-				83500.0,
 				83500.0
 			]
 		},
@@ -315,12 +231,6 @@
 			"name" : "Jupiter (599)",
 			"radius" : 
 			[
-				69911000.0,
-				69911000.0,
-				69911000.0,
-				69911000.0,
-				69911000.0,
-				69911000.0,
 				69911000.0,
 				69911000.0,
 				69911000.0
@@ -335,12 +245,6 @@
 			[
 				198800.0,
 				198800.0,
-				198800.0,
-				198800.0,
-				198800.0,
-				198800.0,
-				198800.0,
-				198800.0,
 				198800.0
 			]
 		},
@@ -351,12 +255,6 @@
 			"name" : "Enceladus (602)",
 			"radius" : 
 			[
-				252300.0,
-				252300.0,
-				252300.0,
-				252300.0,
-				252300.0,
-				252300.0,
 				252300.0,
 				252300.0,
 				252300.0
@@ -371,12 +269,6 @@
 			[
 				536300.0,
 				536300.0,
-				536300.0,
-				536300.0,
-				536300.0,
-				536300.0,
-				536300.0,
-				536300.0,
 				536300.0
 			]
 		},
@@ -387,12 +279,6 @@
 			"name" : "Dione (604)",
 			"radius" : 
 			[
-				562500.0,
-				562500.0,
-				562500.0,
-				562500.0,
-				562500.0,
-				562500.0,
 				562500.0,
 				562500.0,
 				562500.0
@@ -407,12 +293,6 @@
 			[
 				764500.0,
 				764500.0,
-				764500.0,
-				764500.0,
-				764500.0,
-				764500.0,
-				764500.0,
-				764500.0,
 				764500.0
 			]
 		},
@@ -423,12 +303,6 @@
 			"name" : "Titan (606)",
 			"radius" : 
 			[
-				2575500.0,
-				2575500.0,
-				2575500.0,
-				2575500.0,
-				2575500.0,
-				2575500.0,
 				2575500.0,
 				2575500.0,
 				2575500.0
@@ -443,12 +317,6 @@
 			[
 				734500.0,
 				734500.0,
-				734500.0,
-				734500.0,
-				734500.0,
-				734500.0,
-				734500.0,
-				734500.0,
 				734500.0
 			]
 		},
@@ -459,12 +327,6 @@
 			"name" : "Saturn (699)",
 			"radius" : 
 			[
-				58232000.0,
-				58232000.0,
-				58232000.0,
-				58232000.0,
-				58232000.0,
-				58232000.0,
 				58232000.0,
 				58232000.0,
 				58232000.0
@@ -479,12 +341,6 @@
 			[
 				581100.0,
 				577900.0,
-				577700.0,
-				581100.0,
-				577900.0,
-				577700.0,
-				581100.0,
-				577900.0,
 				577700.0
 			]
 		},
@@ -495,12 +351,6 @@
 			"name" : "Umbriel (702)",
 			"radius" : 
 			[
-				584700.0,
-				584700.0,
-				584700.0,
-				584700.0,
-				584700.0,
-				584700.0,
 				584700.0,
 				584700.0,
 				584700.0
@@ -515,12 +365,6 @@
 			[
 				788900.0,
 				788900.0,
-				788900.0,
-				788900.0,
-				788900.0,
-				788900.0,
-				788900.0,
-				788900.0,
 				788900.0
 			]
 		},
@@ -531,12 +375,6 @@
 			"name" : "Oberon (704)",
 			"radius" : 
 			[
-				761400.0,
-				761400.0,
-				761400.0,
-				761400.0,
-				761400.0,
-				761400.0,
 				761400.0,
 				761400.0,
 				761400.0
@@ -551,12 +389,6 @@
 			[
 				240000.0,
 				234200.0,
-				232900.0,
-				240000.0,
-				234200.0,
-				232900.0,
-				240000.0,
-				234200.0,
 				232900.0
 			]
 		},
@@ -567,12 +399,6 @@
 			"name" : "Uranus (799)",
 			"radius" : 
 			[
-				25362000.0,
-				25362000.0,
-				25362000.0,
-				25362000.0,
-				25362000.0,
-				25362000.0,
 				25362000.0,
 				25362000.0,
 				25362000.0
@@ -587,12 +413,6 @@
 			[
 				1352600.0,
 				1352600.0,
-				1352600.0,
-				1352600.0,
-				1352600.0,
-				1352600.0,
-				1352600.0,
-				1352600.0,
 				1352600.0
 			]
 		},
@@ -603,12 +423,6 @@
 			"name" : "Neptune (899)",
 			"radius" : 
 			[
-				24624000.0,
-				24624000.0,
-				24624000.0,
-				24624000.0,
-				24624000.0,
-				24624000.0,
 				24624000.0,
 				24624000.0,
 				24624000.0
@@ -623,12 +437,6 @@
 			[
 				606000.0,
 				606000.0,
-				606000.0,
-				606000.0,
-				606000.0,
-				606000.0,
-				606000.0,
-				606000.0,
 				606000.0
 			]
 		},
@@ -639,12 +447,6 @@
 			"name" : "Pluto (999)",
 			"radius" : 
 			[
-				1188300.0,
-				1188300.0,
-				1188300.0,
-				1188300.0,
-				1188300.0,
-				1188300.0,
 				1188300.0,
 				1188300.0,
 				1188300.0
@@ -659,12 +461,6 @@
 			[
 				469700.0,
 				469700.0,
-				469700.0,
-				469700.0,
-				469700.0,
-				469700.0,
-				469700.0,
-				469700.0,
 				469700.0
 			]
 		},
@@ -675,12 +471,6 @@
 			"name" : "2 Pallas (A802 FA)",
 			"radius" : 
 			[
-				256500.0,
-				256500.0,
-				256500.0,
-				256500.0,
-				256500.0,
-				256500.0,
 				256500.0,
 				256500.0,
 				256500.0
@@ -695,12 +485,6 @@
 			[
 				262700.0,
 				262700.0,
-				262700.0,
-				262700.0,
-				262700.0,
-				262700.0,
-				262700.0,
-				262700.0,
 				262700.0
 			]
 		}
@@ -709,22 +493,10 @@
 	{
 		"-159" : 
 		{
-			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Feb 05, 2025    Europa Clipper (Spacecraft) / (Sun, Jupiter)     -159\n                       https://science.nasa.gov/mission/europa-clipper/\n                               https://europa.nasa.gov/\n\n BACKGROUND:\n  NASA's Europa Clipper spacecraft will carry a suite of science instruments \n  to assess habitability of Jupiter's ice-covered moon Europa (502) while\n  confirming the existence and nature of an expected sub-surface ocean.\n\n  Launched            : 2024-Oct-14 16:06 UTC (SpaceX Falcon Heavy, KSC LC-39A)\n  Mars gravity assist : 2025-Mar-01\n  Earth gravity assist: 2026-Dec-03\n         Arrival      : 2030-Apr-11 (5.50 year time-of-flight)\n  Mission length      : 4.12 years (prime mission, JOI to E49)\n  End-of-mission      : 2034-Sep   (directed to Ganymede impact ~30d after E49)\n\n  The spacecraft is expected to orbit Jupiter 75 times and conduct 49 flybys \n  of Europa at altitudes as low as 25 km. This will reduce exposure to the high\n  levels of radiation Europa moves within.\n\n  Gravity-assists from Europa (49), Ganymede (7), and Callisto (9) will be used\n  to target different Europa close approach points on each flyby.\n\n SPACECRAFT:\n  Considering solar arrays and radar antennas, Europa Clipper will be the\n  largest spacecraft NASA has developed to-date for an interplanetary mission. \n  When arrays are deployed, the spacecraft will span 30.5 meters.\n\n  Main body (bus): 3 x 4.7 x 4 meters\n  Dry mass (no propellant): 3241 kg\n  Propellant: 2750 kg\n  Solar power arrays: 2 x 14.2 x 4.1 meters\n\n SCIENCE INSTRUMENTS\n  Europa Imaging System (EIS)\n  Europa Thermal Emission Imaging System (E-THEMIS)\n  Europa Ultraviolet Spectrograph (Europa-UVS)\n  Mapping Imaging Spectrometer for Europa (MISE)\n  Europa Clipper Magnetometer (ECM)\n  Plasma Instrument for Magnetic Sounding (PIMS)\n  Gravity/Radio Science\n  Radar for Europa Assessment and Sounding: Ocean to Near-surface (REASON)\n  MAss Spectrometer for Planetary EXploration/Europa (MASPEX)\n  SUrface Dust Analyzer (SUDA)\n\n SPACECRAFT TRAJECTORY (from JPL navigation):\n  Segments marked by '*' below are pre-launch predictions. Based on tracking\n  data through 2025-Jan-21. Data thereafter is predicted:\n\n Trajectory files (JPL mission design/nav)               Start         End\n ---------------------------------------------------- -----------  -----------\n*21F31_MEGA_L241014_A300411_LP05_V7  (16:13 - 17:08)  2024-Oct-14  2024-Oct-14\n trj_241014-241103-dco2410142047-postLaunch-OD001-v1  2024-Oct-14  2024-Oct-18\n trj_241018-250130-dco2411082133-cru002-fin-OD018-v14 2024-Oct-18  2024-Nov-23\n trj_241123-250315-dco2412031638-cru003-fin-OD020-v1  2024-Nov-23  2024-Dec-04\n trj_241204-250311-dco2501221611-MGATRGa-OD034-v1     2024-Dec-04  2025-Mar-11 \n*21F31_MEGA_L241014_A300411_LP05_V7                   2025-Mar-11  2031-Feb-07\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sat Feb 22 08:17:48 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Europa Clipper (spacecraft) (-159) {source: Europa_Clipper_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Apr-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-May-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Feb 05, 2025    Europa Clipper (Spacecraft) / (Sun, Jupiter)     -159\n                       https://science.nasa.gov/mission/europa-clipper/\n                               https://europa.nasa.gov/\n\n BACKGROUND:\n  NASA's Europa Clipper spacecraft will carry a suite of science instruments \n  to assess habitability of Jupiter's ice-covered moon Europa (502) while\n  confirming the existence and nature of an expected sub-surface ocean.\n\n  Launched            : 2024-Oct-14 16:06 UTC (SpaceX Falcon Heavy, KSC LC-39A)\n  Mars gravity assist : 2025-Mar-01\n  Earth gravity assist: 2026-Dec-03\n         Arrival      : 2030-Apr-11 (5.50 year time-of-flight)\n  Mission length      : 4.12 years (prime mission, JOI to E49)\n  End-of-mission      : 2034-Sep   (directed to Ganymede impact ~30d after E49)\n\n  The spacecraft is expected to orbit Jupiter 75 times and conduct 49 flybys \n  of Europa at altitudes as low as 25 km. This will reduce exposure to the high\n  levels of radiation Europa moves within.\n\n  Gravity-assists from Europa (49), Ganymede (7), and Callisto (9) will be used\n  to target different Europa close approach points on each flyby.\n\n SPACECRAFT:\n  Considering solar arrays and radar antennas, Europa Clipper will be the\n  largest spacecraft NASA has developed to-date for an interplanetary mission. \n  When arrays are deployed, the spacecraft will span 30.5 meters.\n\n  Main body (bus): 3 x 4.7 x 4 meters\n  Dry mass (no propellant): 3241 kg\n  Propellant: 2750 kg\n  Solar power arrays: 2 x 14.2 x 4.1 meters\n\n SCIENCE INSTRUMENTS\n  Europa Imaging System (EIS)\n  Europa Thermal Emission Imaging System (E-THEMIS)\n  Europa Ultraviolet Spectrograph (Europa-UVS)\n  Mapping Imaging Spectrometer for Europa (MISE)\n  Europa Clipper Magnetometer (ECM)\n  Plasma Instrument for Magnetic Sounding (PIMS)\n  Gravity/Radio Science\n  Radar for Europa Assessment and Sounding: Ocean to Near-surface (REASON)\n  MAss Spectrometer for Planetary EXploration/Europa (MASPEX)\n  SUrface Dust Analyzer (SUDA)\n\n SPACECRAFT TRAJECTORY (from JPL navigation):\n  Segments marked by '*' below are pre-launch predictions. Based on tracking\n  data through 2025-Jan-21. Data thereafter is predicted:\n\n Trajectory files (JPL mission design/nav)               Start         End\n ---------------------------------------------------- -----------  -----------\n*21F31_MEGA_L241014_A300411_LP05_V7  (16:13 - 17:08)  2024-Oct-14  2024-Oct-14\n trj_241014-241103-dco2410142047-postLaunch-OD001-v1  2024-Oct-14  2024-Oct-18\n trj_241018-250130-dco2411082133-cru002-fin-OD018-v14 2024-Oct-18  2024-Nov-23\n trj_241123-250315-dco2412031638-cru003-fin-OD020-v1  2024-Nov-23  2024-Dec-04\n trj_241204-250311-dco2501221611-MGATRGa-OD034-v1     2024-Dec-04  2025-Mar-11 \n*21F31_MEGA_L241014_A300411_LP05_V7                   2025-Mar-11  2031-Feb-07\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Wed Feb 26 06:18:08 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Europa Clipper (spacecraft) (-159) {source: Europa_Clipper_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Mar-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
 			"name" : "Europa Clipper (spacecraft) (-159)",
 			"radius" : 
 			[
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
 				1.0,
 				1.0,
 				1.0
@@ -738,12 +510,6 @@
 			[
 				1.0,
 				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
 				1.0
 			]
 		},
@@ -753,12 +519,6 @@
 			"name" : "Voyager 2 (spacecraft) (-32)",
 			"radius" : 
 			[
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
 				1.0,
 				1.0,
 				1.0
@@ -772,16 +532,304 @@
 			[
 				1.0,
 				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
-				1.0,
 				1.0
+			]
+		},
+		"10" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: July 31, 2013                  Sun                                 10\n\n PHYSICAL PROPERTIES (updated 2024-Oct-30):\n  GM, km^3/s^2          = 132712440041.93938  Mass, 10^24 kg        = ~1988410\n  Vol. mean radius, km  = 695700              Volume, 10^12 km^3    = 1412000\n  Solar radius (IAU2015)= 695700 km           Mean density, g/cm^3  = 1.408\n  Radius (photosphere)  = 696500 km           Angular diam at 1 AU  = 1919.3\"\n  Photosphere temp., K  = 6600 (bottom)       Photosphere temp., K  = 4400(top)\n  Photospheric depth    = ~500 km             Chromospheric depth   = ~2500 km\n  Flatness, f           = 0.00005             Adopted sid. rot. per.= 25.38 d\n  Surface gravity       =  274.0 m/s^2        Escape speed, km/s    =  617.7\n  Pole (RA,DEC), deg.   = (286.13, 63.87)     Obliquity to ecliptic = 7.25 deg.\n  Solar constant (1 AU) = 1367.6 W/m^2        Luminosity, 10^24 J/s = 382.8\n  Mass-energy conv rate = 4.260 x 10^9 kg/s   Effective temp, K     = 5772\n  Sunspot cycle         = 11.4 yr             Cycle 24 sunspot min. = 2008 A.D.\n\n  Motion relative to nearby stars = apex : R.A.= 271 deg.; DEC.= +30 deg.\n                                    speed: 19.4 km/s (0.0112 au/day)\n  Motion relative to 2.73K BB/CBR = apex : l= 264.7 +- 0.8; b= 48.2 +- 0.5 deg.\n                                    speed: 369 +-11 km/s\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:00:49 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Sun (10)                        {source: DE441}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Sun (10)",
+			"radius" : 
+			[
+				695700000.0,
+				695700000.0,
+				695700000.0
+			]
+		},
+		"199" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: April 12, 2021             Mercury                            199 / 1\n\n PHYSICAL DATA (updated 2024-Mar-04):\n  Vol. Mean Radius (km) =  2439.4+-0.1    Density (g cm^-3)     = 5.427\n  Mass x10^23 (kg)      =     3.302       Volume (x10^10 km^3)  = 6.085  \n  Sidereal rot. period  =    58.6463 d    Sid. rot. rate (rad/s)= 0.00000124001\n  Mean solar day        =   175.9421 d    Core radius (km)      = ~1600 \n  Geometric Albedo      =     0.106       Surface emissivity    = 0.77+-0.06\n  GM (km^3/s^2)         = 22031.86855     Equatorial radius, Re = 2440.53 km\n  GM 1-sigma (km^3/s^2) =                 Mass ratio (Sun/plnt) = 6023682\n  Mom. of Inertia       =     0.33        Equ. gravity  m/s^2   = 3.701     \n  Atmos. pressure (bar) = < 5x10^-15      Max. angular diam.    = 11.0\"   \n  Mean Temperature (K)  = 440             Visual mag. V(1,0)    = -0.42 \n  Obliquity to orbit[1] =  2.11' +/- 0.1' Hill's sphere rad. Rp = 94.4 \n  Sidereal orb. per.    =  0.2408467 y    Mean Orbit vel.  km/s = 47.362 \n  Sidereal orb. per.    = 87.969257  d    Escape vel. km/s      =  4.435\n                                 Perihelion  Aphelion    Mean\n  Solar Constant (W/m^2)         14462       6278        9126\n  Maximum Planetary IR (W/m^2)   12700       5500        8000\n  Minimum Planetary IR (W/m^2)   6           6           6\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:00:54 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Mercury (199)                   {source: DE441}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Mercury (199)",
+			"radius" : 
+			[
+				2439400.0,
+				2439400.0,
+				2439400.0
+			]
+		},
+		"299" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: April 12, 2021                Venus                           299 / 2\n \n PHYSICAL DATA (updated 2020-Oct-19):\n  Vol. Mean Radius (km) =  6051.84+-0.01 Density (g/cm^3)      =  5.204\n  Mass x10^23 (kg)      =    48.685      Volume (x10^10 km^3)  = 92.843\n  Sidereal rot. period  =   243.018484 d Sid. Rot. Rate (rad/s)= -0.00000029924\n  Mean solar day        =   116.7490 d   Equ. gravity  m/s^2   =  8.870\n  Mom. of Inertia       =     0.33       Core radius (km)      = ~3200\n  Geometric Albedo      =     0.65       Potential Love # k2   = ~0.25\n  GM (km^3/s^2)         = 324858.592     Equatorial Radius, Re = 6051.893 km\n  GM 1-sigma (km^3/s^2) =    +-0.006     Mass ratio (Sun/Venus)= 408523.72\n  Atmos. pressure (bar) =  90            Max. angular diam.    =   60.2\"\n  Mean Temperature (K)  = 735            Visual mag. V(1,0)    =   -4.40\n  Obliquity to orbit    = 177.3 deg      Hill's sphere rad.,Rp =  167.1\n  Sidereal orb. per., y =   0.61519726   Orbit speed, km/s     =   35.021\n  Sidereal orb. per., d = 224.70079922   Escape speed, km/s    =   10.361\n                                 Perihelion  Aphelion    Mean\n  Solar Constant (W/m^2)         2759         2614       2650\n  Maximum Planetary IR (W/m^2)    153         153         153\n  Minimum Planetary IR (W/m^2)    153         153         153\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:01:02 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Venus (299)                     {source: DE441}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Venus (299)",
+			"radius" : 
+			[
+				6051840.0,
+				6051840.0,
+				6051840.0
+			]
+		},
+		"301" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: July 31, 2013             Moon / (Earth)                          301\n \n GEOPHYSICAL DATA (updated 2018-Aug-15):\n  Vol. mean radius, km  = 1737.53+-0.03    Mass, x10^22 kg       =    7.349\n  Radius (gravity), km  = 1738.0           Surface emissivity    =    0.92\n  Radius (IAU), km      = 1737.4           GM, km^3/s^2          = 4902.800066\n  Density, g/cm^3       =    3.3437        GM 1-sigma, km^3/s^2  =  +-0.0001  \n  V(1,0)                =   +0.21          Surface accel., m/s^2 =    1.62\n  Earth/Moon mass ratio = 81.3005690769    Farside crust. thick. = ~80 - 90 km\n  Mean crustal density  = 2.97+-.07 g/cm^3 Nearside crust. thick.= 58+-8 km \n  Heat flow, Apollo 15  = 3.1+-.6 mW/m^2   Mean angular diameter = 31'05.2\"\n  Heat flow, Apollo 17  = 2.2+-.5 mW/m^2   Sid. rot. rate, rad/s = 0.0000026617\n  Geometric Albedo      = 0.12             Mean solar day        = 29.5306 d\n  Obliquity to orbit    = 6.67 deg         Orbit period          = 27.321582 d\n  Semi-major axis, a    = 384400 km        Eccentricity          = 0.05490\n  Mean motion, rad/s    = 2.6616995x10^-6  Inclination           = 5.145 deg\n  Apsidal period        = 3231.50 d        Nodal period          = 6798.38 d\n                                 Perihelion  Aphelion    Mean\n  Solar Constant (W/m^2)         1414+-7     1323+-7     1368+-7\n  Maximum Planetary IR (W/m^2)   1314        1226        1268\n  Minimum Planetary IR (W/m^2)      5.2         5.2         5.2\n********************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:01:11 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Moon (301)                      {source: DE441}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Moon (301)",
+			"radius" : 
+			[
+				1737530.0,
+				1737530.0,
+				1737530.0
+			]
+		},
+		"399" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: April 12, 2021                 Earth                              399\n \n GEOPHYSICAL PROPERTIES (revised May 9, 2022):\n  Vol. Mean Radius (km)    = 6371.01+-0.02   Mass x10^24 (kg)= 5.97219+-0.0006\n  Equ. radius, km          = 6378.137        Mass layers:\n  Polar axis, km           = 6356.752          Atmos         = 5.1   x 10^18 kg\n  Flattening               = 1/298.257223563   oceans        = 1.4   x 10^21 kg\n  Density, g/cm^3          = 5.51              crust         = 2.6   x 10^22 kg\n  J2 (IERS 2010)           = 0.00108262545     mantle        = 4.043 x 10^24 kg\n  g_p, m/s^2  (polar)      = 9.8321863685      outer core    = 1.835 x 10^24 kg\n  g_e, m/s^2  (equatorial) = 9.7803267715      inner core    = 9.675 x 10^22 kg\n  g_o, m/s^2               = 9.82022         Fluid core rad  = 3480 km\n  GM, km^3/s^2             = 398600.435436   Inner core rad  = 1215 km\n  GM 1-sigma, km^3/s^2     =      0.0014     Escape velocity = 11.186 km/s\n  Rot. Rate (rad/s)        = 0.00007292115   Surface area:\n  Mean sidereal day, hr    = 23.9344695944     land          = 1.48 x 10^8 km\n  Mean solar day 2000.0, s = 86400.002         sea           = 3.62 x 10^8 km\n  Mean solar day 1820.0, s = 86400.0         Love no., k2    = 0.299\n  Moment of inertia        = 0.3308          Atm. pressure   = 1.0 bar\n  Mean surface temp (Ts), K= 287.6           Volume, km^3    = 1.08321 x 10^12\n  Mean effect. temp (Te), K= 255             Magnetic moment = 0.61 gauss Rp^3\n  Geometric albedo         = 0.367           Vis. mag. V(1,0)= -3.86\n  Solar Constant (W/m^2)   = 1367.6 (mean), 1414 (perihelion), 1322 (aphelion)\n HELIOCENTRIC ORBIT CHARACTERISTICS:\n  Obliquity to orbit, deg  = 23.4392911  Sidereal orb period  = 1.0000174 y\n  Orbital speed, km/s      = 29.79       Sidereal orb period  = 365.25636 d\n  Mean daily motion, deg/d = 0.9856474   Hill's sphere radius = 234.9       \n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:01:17 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Earth (399)                     {source: DE441}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Earth (399)",
+			"radius" : 
+			[
+				6371010.0,
+				6371010.0,
+				6371010.0
+			]
+		},
+		"401" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Sep 28, 2012             Phobos / (Mars)                          401\n\n SATELLITE PHYSICAL PROPERTIES:\n  Radius (km)             = 13.1 x11.1 x9.3 Density (g cm^-3)   =  1.90 +- 0.08\n  Mass (10^20 kg )        =  1.08 (10^-4)   Geometric Albedo    =  0.06 \n                                 (+- 0.1)   V(1,0)              = +11.8\n\n SATELLITE ORBITAL DATA:\n  Semi-major axis, a (km) = 9.3772(10^3)    Orbital period      = 0.319 d\n  Eccentricity, e         = 0.0151          Rotational period   = Synchronous\n  Inclination, i  (deg)   = 1.082\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:01:25 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Phobos (401)                    {source: mar097}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Phobos (401)",
+			"radius" : 
+			[
+				13100.0,
+				11100.0,
+				9300.0
+			]
+		},
+		"402" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Sep 28, 2012             Deimos / (Mars)                          402\n\n SATELLITE PHYSICAL PROPERTIES:\n  Radius (km)             = 7.8 x 6.0 x 5.1 Density (g cm^-3)   =  1.76 +- 0.30\n  Mass (10^20 kg )        = 1.80 (10^-5)    Geometric Albedo    =  0.06 \n                               (+- 0.15)    V(1,0)              = +12.89\n\n SATELLITE ORBITAL DATA:\n  Semi-major axis, a (km) = 23.4632(10^3)   Orbital period      = 1.263 d\n  Eccentricity, e         =  0.00033        Rotational period   = Synchronous\n  Inclination, i  (deg)   =  1.791\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:01:32 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Deimos (402)                    {source: mar097}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Deimos (402)",
+			"radius" : 
+			[
+				7800.0,
+				6000.0,
+				5100.0
+			]
+		},
+		"499" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: June 21, 2016                 Mars                            499 / 4\n \n PHYSICAL DATA (updated 2019-Oct-29):\n  Vol. mean radius (km) = 3389.92+-0.04   Density (g/cm^3)      =  3.933(5+-4)\n  Mass x10^23 (kg)      =    6.4171       Flattening, f         =  1/169.779\n  Volume (x10^10 km^3)  =   16.318        Equatorial radius (km)=  3396.19\n  Sidereal rot. period  =   24.622962 hr  Sid. rot. rate, rad/s =  0.0000708822 \n  Mean solar day (sol)  =   88775.24415 s Polar gravity m/s^2   =  3.758\n  Core radius (km)      = ~1700           Equ. gravity  m/s^2   =  3.71\n  Geometric Albedo      =    0.150                                              \n\n  GM (km^3/s^2)         = 42828.375214    Mass ratio (Sun/Mars) = 3098703.59\n  GM 1-sigma (km^3/s^2) = +- 0.00028      Mass of atmosphere, kg= ~ 2.5 x 10^16\n  Mean temperature (K)  =  210            Atmos. pressure (bar) =    0.0056 \n  Obliquity to orbit    =   25.19 deg     Max. angular diam.    =  17.9\"\n  Mean sidereal orb per =    1.88081578 y Visual mag. V(1,0)    =  -1.52\n  Mean sidereal orb per =  686.98 d       Orbital speed,  km/s  =  24.13\n  Hill's sphere rad. Rp =  319.8          Escape speed, km/s    =   5.027\n                                 Perihelion  Aphelion    Mean\n  Solar Constant (W/m^2)         717         493         589\n  Maximum Planetary IR (W/m^2)   470         315         390\n  Minimum Planetary IR (W/m^2)    30          30          30\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:01:42 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Mars (499)                      {source: mar097}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Mars (499)",
+			"radius" : 
+			[
+				3389920.0,
+				3389920.0,
+				3389920.0
+			]
+		},
+		"501" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Mar 12, 2021             Io  / (Jupiter)                          501\n\n SATELLITE PHYSICAL PROPERTIES:\n  Mean radius (km)       = 1821.49           Density (g cm^-3) = 3.528 +- 0.006\n  GM (km^3/s^2)          = 5959.9155+- 0.004 Geometric Albedo  = 0.63  +- 0.02\n\n SATELLITE ORBIT (at J2000.0 epoch, 2000-Jan-1.5):\n  Semi-major axis, a (km)~ 422,000           Orbital period    ~ 1.77 d\n  Eccentricity, e        ~ 0.00472           Rotational period = Synchronous\n  Inclination, i  (deg)  ~ 0.0375\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:01:50 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Io (501)                        {source: jup365_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Io (501)",
+			"radius" : 
+			[
+				1821490.0,
+				1821490.0,
+				1821490.0
+			]
+		},
+		"502" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Mar 12, 2021           Europa / (Jupiter)                         502\n\n SATELLITE PHYSICAL PROPERTIES:\n  Mean radius (km)       = 1560.8   +- 0.3    Density (g cm^-3)= 3.013 +- 0.005\n  GM   (km^3/s^2)        = 3202.7121+- 0.0054 Geometric Albedo = 0.67 +/- 0.03  \n\n SATELLITE ORBIT (at J2000.0 epoch, 2000-Jan-1.5):\n  Semi-major axis, a (km) ~ 671,000           Orbital period   ~ 3.55 d\n  Eccentricity, e         ~ 0.00981        Rotational period   = Synchronous\n  Inclination, i  (deg)   ~ 0.462\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:01:56 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Europa (502)                    {source: jup365_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Europa (502)",
+			"radius" : 
+			[
+				1560800.0,
+				1560800.0,
+				1560800.0
+			]
+		},
+		"503" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Mar 12, 2021           Ganymede / (Jupiter)                       503\n\n SATELLITE PHYSICAL PROPERTIES:\n  Mean radius (km)       = 2631.2   +- 1.7    Density (g cm^-3)= 1.942 +- 0.005\n  GM (km^3/s^2)          = 9887.8328+- 0.0074 Geometric Albedo = 0.43  +- 0.02\n\n SATELLITE ORBIT (at J2000.0 epoch, 2000-Jan-1.5):\n  Semi-major axis, a (km) ~ 1,070,000         Orbital period   ~ 7.155 d\n  Eccentricity, e         ~ 0.00146           Rotational period= Synchronous\n  Inclination, i  (deg)   ~ 0.207 \n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:02:05 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Ganymede (503)                  {source: jup365_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Ganymede (503)",
+			"radius" : 
+			[
+				2631200.0,
+				2631200.0,
+				2631200.0
+			]
+		},
+		"504" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Mar 12, 2021           Callisto / (Jupiter)                       504\n\n SATELLITE PHYSICAL PROPERTIES:\n  Mean radius (km)      = 2410.3 +- 1.5       Density (g cm^-3)= 1.834 +- 0.004\n  GM (km^3/s^2)         = 7179.2834 +- 0.0097 Geometric Albedo = 0.17  +- 0.02\n\n SATELLITE ORBIT (at J2000.0 epoch, 2000-Jan-1.5):\n  Semi-major axis, a (km)~ 1,883,000          Orbital period   ~ 16.691    d\n  Eccentricity, e        ~ 0.00744            Rotational period= Synchronous\n  Inclination, i  (deg)  ~ 0.200 \n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:02:14 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Callisto (504)                  {source: jup365_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Callisto (504)",
+			"radius" : 
+			[
+				2410300.0,
+				2410300.0,
+				2410300.0
+			]
+		},
+		"505" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Mar 12, 2021           Amalthea / (Jupiter)                       505\n\n SATELLITE PHYSICAL PROPERTIES:\n  Mean radius (km)        = 83.5    +- 3     Density (g cm^-3) = 0.849 +- 0.199             \n  GM (km^3/s^2)           = 0.1646  +- 0.026 Geometric Albedo  = 0.090 +- 0.005\n\n SATELLITE ORBIT (at J2000.0 epoch, 2000-Jan-1.5):\n  Semi-major axis, a (km) ~ 182,000         Orbital period     ~ 0.501 d\n  Eccentricity, e         ~ 0.00613         Rotational period  = Synchronous\n  Inclination, i  (deg)   ~ 0.376\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:02:20 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Amalthea (505)                  {source: jup365_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Amalthea (505)",
+			"radius" : 
+			[
+				83500.0,
+				83500.0,
+				83500.0
+			]
+		},
+		"599" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: April 12, 2021               Jupiter                              599\n \n PHYSICAL DATA (revised 2025-Jan-30):\n  Mass x 10^26 (kg)     = 18.9819           Density (g/cm^3)  = 1.3262 +- .0003\n  Equat. radius (1 bar) = 71492+-4 km       Polar radius (km)     = 66854+-10\n  Vol. Mean Radius (km) = 69911+-6          Flattening            = 0.06487\n  Geometric Albedo      = 0.52              Rocky core mass (Mc/M)= 0.0261\n  Sid. rot. period (III)= 9h 55m 29.711 s   Sid. rot. rate (rad/s)= 0.00017585\n  Mean solar day, hrs   = ~9.9259         \n  GM (km^3/s^2)         = 126686531.900     GM 1-sigma (km^3/s^2) =  +- 1.2732\n  Equ. grav, ge (m/s^2) = 24.79             Pol. grav, gp (m/s^2) =  28.34\n  Vis. magnitude V(1,0) = -9.40\n  Vis. mag. (opposition)= -2.70             Obliquity to orbit    =  3.13 deg\n  Sidereal orbit period = 11.861982204 y    Sidereal orbit period = 4332.589 d\n  Mean daily motion     = 0.0831294 deg/d   Mean orbit speed, km/s= 13.0697\n  Atmos. temp. (1 bar)  = 165+-5 K          Escape speed, km/s    =  59.5           \n  A_roche(ice)/Rp       =  2.76             Hill's sphere rad. Rp = 740\n                                 Perihelion   Aphelion     Mean\n  Solar Constant (W/m^2)         56           46           51\n  Maximum Planetary IR (W/m^2)   13.7         13.4         13.6\n  Minimum Planetary IR (W/m^2)   13.7         13.4         13.6\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:02:25 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Jupiter (599)                   {source: jup365_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Jupiter (599)",
+			"radius" : 
+			[
+				69911000.0,
+				69911000.0,
+				69911000.0
+			]
+		},
+		"601" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Jan 26, 2022             Mimas / (Saturn)                         601\n                        http://ssd.jpl.nasa.gov/?sat_phys_par\n                         http://ssd.jpl.nasa.gov/?sat_elem\n\n SATELLITE PHYSICAL PROPERTIES:\n  Mean Radius (km)        = 198.8   +- 1.5   Density (g/cm^3)  = 1.152 +- 0.027\n  Mass (10^19 kg)         =   3.75           Geometric Albedo  = 0.6 \n  GM (km^3/s^2)           =   2.503489       V(1,0)            = +3.3\n\n SATELLITE ORBITAL DATA (mean elements referred to local Laplace plane):\n  Semi-major axis, a (km) = 185.54(10^3)    Orbital period     = 0.9424218 d\n  Eccentricity, e         = 0.0196          Rotational period  = Synchronous\n  Inclination, i  (deg)   = 1.572\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:02:30 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Mimas (601)                     {source: sat441l}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Mimas (601)",
+			"radius" : 
+			[
+				198800.0,
+				198800.0,
+				198800.0
+			]
+		},
+		"602" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Jan 26, 2022            Enceladus / (Saturn)                      602\n                           http://ssd.jpl.nasa.gov/?sat_phys_par\n                             http://ssd.jpl.nasa.gov/?sat_elem\n\n SATELLITE PHYSICAL PROPERTIES:\n  Mean Radius (km)        = 252.3   +- 0.6   Density (g/cm^3) =  1.606 +- 0.012\n  Mass (10^19 kg)         =  10.805          Geometric Albedo =  1.04\n  GM (km^3/s^2)           =   7.210367       V(1,0)           =  +2.2\n\n SATELLITE ORBITAL DATA (mean elements referred to local Laplace plane):\n  Semi-major axis, a (km) = 238.04(10^3)    Orbital period    = 1.370218 d\n  Eccentricity, e         = 0.0047          Rotational period = Synchronous\n  Inclination, i  (deg)   = 0.009\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:02:35 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Enceladus (602)                 {source: sat441l}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Enceladus (602)",
+			"radius" : 
+			[
+				252300.0,
+				252300.0,
+				252300.0
+			]
+		},
+		"603" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Jan 26, 2022            Tethys  / (Saturn)                        603\n                          http://ssd.jpl.nasa.gov/?sat_phys_par\n                            http://ssd.jpl.nasa.gov/?sat_elem\n\n SATELLITE PHYSICAL PROPERTIES:\n  Mean Radius (km)       = 536.3  +- 1.5     Density (g/cm^3)  =  0.956+- 0.008\n  Mass (10^19 kg)        =  61.76 +- 0.11    Geometric Albedo  =  0.80\n  GM (km^3/s^2)          =  41.21 +- 0.007   V(1,0)            = +0.7\n\n SATELLITE ORBITAL DATA (mean values with respect to local Laplace plane):\n  Semi-major axis, a (km)=  294.670(10^3)    Orbital period    =  1.888 d\n  Eccentricity, e        =     0.0001        Rotational period = Synchronous\n  Inclination, i  (deg)  =     1.091\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:02:40 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Tethys (603)                    {source: sat441l}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Tethys (603)",
+			"radius" : 
+			[
+				536300.0,
+				536300.0,
+				536300.0
+			]
+		},
+		"604" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Jan 26, 2022            Dione  / (Saturn)                         604\n                        http://ssd.jpl.nasa.gov/?sat_phys_par\n                          http://ssd.jpl.nasa.gov/?sat_elem\n\n SATELLITE PHYSICAL PROPERTIES:\n  Mean Radius (km)        = 562.5   +- 5     Density (g/cm^3) =  1.469 +- 0.012\n  Mass (10^19 kg)         = 109.572          Geometric Albedo =  0.6\n  GM (km^3/s^2)           =  73.116 +- 0.02 V(1,0)            = +0.8\n\n SATELLITE ORBITAL DATA (mean values referred to local Laplace plane):\n  Semi-major axis, a (km) = 377.42(10^3)    Orbital period    = 2.736915 d\n  Eccentricity, e         = 0.0022          Rotational period = Synchronous\n  Inclination, i  (deg)   = 0.028\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:02:45 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Dione (604)                     {source: sat441l}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Dione (604)",
+			"radius" : 
+			[
+				562500.0,
+				562500.0,
+				562500.0
+			]
+		},
+		"605" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Jan 26, 2022            Rhea  / (Saturn)                          605\n                        http://ssd.jpl.nasa.gov/?sat_phys_par\n                         http://ssd.jpl.nasa.gov/?sat_elem\n\n SATELLITE PHYSICAL PROPERTIES:\n  Mean Radius (km)        = 764.5  +- 2     Density (g/cm^3)  =  1.233 +- 0.010\n  Mass (10^19 kg)         = 230.9           Geometric Albedo  =  0.6\n  GM (km^3/s^2)           = 153.94 +- 0.16  V(1,0)            = +0.1\n\n SATELLITE ORBITAL DATA (mean values referred to local Laplace plane):\n  Semi-major axis, a (km) = 527.07(10^3)    Orbital period    = 4.518 d\n  Eccentricity, e         = 0.001           Rotational period = Synchronous\n  Inclination, i  (deg)   = 0.331\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:02:50 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Rhea (605)                      {source: sat441l}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Rhea (605)",
+			"radius" : 
+			[
+				764500.0,
+				764500.0,
+				764500.0
+			]
+		},
+		"606" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Jan 26, 2022              Titan / (Saturn)                        606\n                         http://ssd.jpl.nasa.gov/?sat_phys_par\n                           http://ssd.jpl.nasa.gov/?sat_elem\n\n SATELLITE PHYSICAL PROPERTIES:\n  Mean Radius (km)       = 2575.5   +-  2.0  Density (g/cm^3) =  1.880 +- 0.004\n  Mass (10^19 kg)        = 13455.3           Geometric Albedo =  0.2 \n  GM (km^3/s^2)          = 8978.14  +-  0.06  V(1,0)          = -1.2 \n\n SATELLITE ORBITAL DATA:\n  Semi-major axis, a (km)= 1221.87 (10^3)  Orbital period     = 15.945421 d\n  Eccentricity, e        = 0.0288          Rotational period  = \n  Inclination, i  (deg)  = 0.28\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:02:57 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Titan (606)                     {source: sat441l}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Titan (606)",
+			"radius" : 
+			[
+				2575500.0,
+				2575500.0,
+				2575500.0
+			]
+		},
+		"608" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Jan 26, 2022             Iapetus / (Saturn)                       608\n                          http://ssd.jpl.nasa.gov/?sat_phys_par\n                            http://ssd.jpl.nasa.gov/?sat_elem\n\n SATELLITE PHYSICAL PROPERTIES:\n  Radius (km)            = 734.5    +- 4.0    Density (g/cm^3)=  1.088 +- 0.018 \n  Mass (10^19 kg)        = 180.59             Geometric Albedo=  0.6\n  GM (km^3/s^2)          = 120.52   +- 0.03   V(1,0)          =   +1.5 (.7-2.5)\n\n SATELLITE ORBITAL DATA (mean values with respect to local Laplace plane):\n  Semi-major axis, a (km)= 3560.84 (10^3)     Orbital period    = 79.33 d\n  Eccentricity, e        =     0.0283         Rotational period = Synchronous\n  Inclination, i  (deg)  =     7.489\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:03:03 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Iapetus (608)                   {source: sat441l}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Iapetus (608)",
+			"radius" : 
+			[
+				734500.0,
+				734500.0,
+				734500.0
+			]
+		},
+		"699" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: January 26, 2022             Saturn                               699\n \n PHYSICAL DATA:\n  Mass x10^26 (kg)      = 5.6834          Density (g/cm^3)       =  0.687+-.001\n  Equat. radius (1 bar) = 60268+-4 km     Polar radius (km)      = 54364+-10\n  Vol. Mean Radius (km) = 58232+-6        Flattening             =  0.09796\n  Geometric Albedo      = 0.47            Rocky core mass (Mc/M) =  0.1027\n  Sid. rot. period (III)= 10h 39m 22.4s   Sid. rot. rate (rad/s) =  0.000163785 \n  Mean solar day, hrs   =~10.656         \n  GM (km^3/s^2)         = 37931206.234    GM 1-sigma (km^3/s^2)  = +- 98\n  Equ. grav, ge (m/s^2) = 10.44           Pol. grav, gp (m/s^2)  = 12.14+-0.01\n  Vis. magnitude V(1,0) = -8.88          \n  Vis. mag. (opposition)= +0.67           Obliquity to orbit     = 26.73 deg\n  Sidereal orbit period = 29.447498 yr    Sidereal orbit period  = 10755.698 d\n  Mean daily motion     = 0.0334979 deg/d Mean orbit velocity    =  9.68 km/s\n  Atmos. temp. (1 bar)  = 134+-4 K        Escape speed, km/s    =  35.5          \n  Aroche(ice)/Rp        =  2.71           Hill's sphere rad. Rp  = 1100\n                                 Perihelion  Aphelion    Mean\n  Solar Constant (W/m^2)         16.8        13.6        15.1\n  Maximum Planetary IR (W/m^2)    4.7         4.5         4.6\n  Minimum Planetary IR (W/m^2)    4.7         4.5         4.6\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:03:10 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Saturn (699)                    {source: sat441l}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Saturn (699)",
+			"radius" : 
+			[
+				58232000.0,
+				58232000.0,
+				58232000.0
+			]
+		},
+		"701" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Jan 29, 2025             Ariel  / (Uranus)                        701\n\n SATELLITE PHYSICAL PROPERTIES:\n  Radius (km)           = 581.1x577.9x577.7 Density (g cm^-3)   = 1.54 +- 0.026\n  GM (km^3/s^2)         =   83.43 +- 1.40   Geometric Albedo    =  0.34 \n                                            V(1,0)              = +1.45\n\n SATELLITE ORBITAL DATA (mean elements referred to equatorial plane & IAU pole)\n  Semi-major axis, a (km) = 191.2 (10^3)    Orbital period      = 2.520 d\n  Eccentricity, e         =   0.0034        Rotational period   = Synchronous\n  Inclination, i  (deg)   = 179.69\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:03:25 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Ariel (701)                     {source: ura183_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Ariel (701)",
+			"radius" : 
+			[
+				581100.0,
+				577900.0,
+				577700.0
+			]
+		},
+		"702" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Jan 29, 2025             Umbriel / (Uranus)                       702\n\n SATELLITE PHYSICAL PROPERTIES:\n  Radius (km)           = 584.7  +- 2.8     Density (g cm^-3)   =  1.52 +- 0.04\n  GM (km^3/s^2)         =  85.40 +- 1.9     Geometric Albedo    =  0.18 \n                                            V(1,0)              = +2.10\n\n SATELLITE ORBITAL DATA (mean elements referred to equatorial plane & IAU pole):\n  Semi-major axis, a (km) = 266.0 (10^3)    Orbital period      = 4.144 d\n  Eccentricity, e         =   0.0050        Rotational period   = Synchronous\n  Inclination, i  (deg)   =  179.64\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:03:30 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Umbriel (702)                   {source: ura183_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Umbriel (702)",
+			"radius" : 
+			[
+				584700.0,
+				584700.0,
+				584700.0
+			]
+		},
+		"703" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Jan 29, 2025             Titania / (Uranus)                       703\n\n SATELLITE PHYSICAL PROPERTIES:\n  Radius (km)           = 788.9  +- 1.8     Density (g cm^-3)   =  1.65 +- 0.03\n  GM (km^3/s^2)         = 222.8  +- 4.1     Geometric Albedo    =  0.27 \n                                            V(1,0)              = +1.02\n\n SATELLITE ORBITAL DATA (mean elements referred to equatorial plane & IAU pole)\n  Semi-major axis, a (km) = 435.8 (10^3)    Orbital period      = 8.706 d\n  Eccentricity, e         =   0.0022        Rotational period   = Synchronous\n  Inclination, i  (deg)   = 179.90\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:03:36 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Titania (703)                   {source: ura183_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Titania (703)",
+			"radius" : 
+			[
+				788900.0,
+				788900.0,
+				788900.0
+			]
+		},
+		"704" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Jan 29, 2025             Oberon  / (Uranus)                       704\n\n SATELLITE PHYSICAL PROPERTIES:\n  Radius (km)           = 761.4  +- 2.6     Density (g cm^-3)   =  1.66 +- 0.05\n  GM (km^3/s^2)         = 205.34 +- 5.8     Geometric Albedo    =  0.24 \n                                            V(1,0)              = +1.23\n\n SATELLITE ORBITAL DATA (mean elements referred to equatorial plane & IAU pole)\n  Semi-major axis, a (km) = 582.6 (10^3)    Orbital period      = 13.463 d\n  Eccentricity, e         =   0.0008        Rotational period   = Synchronous\n  Inclination, i  (deg)   = 179.90\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:03:42 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Oberon (704)                    {source: ura183_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Oberon (704)",
+			"radius" : 
+			[
+				761400.0,
+				761400.0,
+				761400.0
+			]
+		},
+		"705" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Jan 29, 2025             Miranda / (Uranus)                       705\n\n SATELLITE PHYSICAL PROPERTIES:\n  Radius (km)           = 240x234.2x232.9   Density (g cm^-3)   =  1.18 +- 0.05\n  GM (km^3/s^2)         =  4.3   +- 0.2     Geometric Albedo    =  0.27 \n                                            V(1,0)              = +3.6 \n\n SATELLITE ORBITAL DATA (mean elements referred to equatorial plane & IAU pole)\n  Semi-major axis, a (km) = 129.8 (10^3)    Orbital period      =  1.413 d\n  Eccentricity, e         =   0.0027        Rotational period   = Synchronous\n  Inclination, i  (deg)   = 175.78\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:03:47 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Miranda (705)                   {source: ura183_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Miranda (705)",
+			"radius" : 
+			[
+				240000.0,
+				234200.0,
+				232900.0
 			]
 		},
 		"715" : 
@@ -792,13 +840,95 @@
 			[
 				77000.0,
 				77000.0,
-				77000.0,
-				77000.0,
-				77000.0,
-				77000.0,
-				77000.0,
-				77000.0,
 				77000.0
+			]
+		},
+		"799" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: January 29, 2025             Uranus                               799\n \n PHYSICAL DATA:\n  Mass x10^24 (kg)      = 86.813          Density (g/cm^3)       =  1.271\n  Equat. radius (1 bar) = 25559+-4 km     Polar radius (km)      = 24973+-20\n  Vol. Mean Radius (km) = 25362+-12       Flattening             =  0.02293\n  Geometric Albedo      = 0.51\n  Sid. rot. period (III)= 17.24+-0.01 h   Sid. rot. rate (rad/s) = -0.000101237\n  Mean solar day, h     =~17.24           Rocky core mass (Mc/M) =  0.0012        \n  GM (km^3/s^2)         = 5793950.6103    GM 1-sigma (km^3/s^2)  = +-4.3 \n  Equ. grav, ge (m/s^2) =  8.87           Pol. grav, gp (m/s^2)  =   9.19+-0.02\n  Visual magnitude V(1,0)= -7.11\n  Vis. mag. (opposition)=  +5.52          Obliquity to orbit     = 97.77 deg\n  Sidereal orbit period = 84.0120465 y    Sidereal orbit period  = 30685.4 d\n  Mean daily motion     = 0.01176904 dg/d Mean orbit velocity    =  6.8 km/s\n  Atmos. temp. (1 bar)  =  76+-2 K        Escape speed, km/s     =  21.3           \n  Aroche(ice)/Rp        =  2.20           Hill's sphere rad., Rp = 2700\n                                 Perihelion   Aphelion    Mean\n  Solar Constant (W/m^2)         4.09         3.39        3.71\n  Maximum Planetary IR (W/m^2)   0.72         0.55        0.63\n  Minimum Planetary IR (W/m^2)   0.72         0.55        0.63\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:03:58 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Uranus (799)                    {source: ura183_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Uranus (799)",
+			"radius" : 
+			[
+				25362000.0,
+				25362000.0,
+				25362000.0
+			]
+		},
+		"801" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Apr 22, 2021             Triton / (Neptune)                       801\n\n SATELLITE PHYSICAL PROPERTIES:\n  Mean radius (km)        = 1352.6 +- 2.4    Mean dens (g cm^-3)= 2.065 +-0.011\n  GM (km^3/s^2)           = 1428.495 +- 0.62 Geometric Albedo   = 0.7  \n                                             V(1,0)             = -1.24\n\n SATELLITE ORBITAL DATA (mean values wrt Laplace plane):\n  Semi-major axis, a (km) = 354800           Orbital period      = 5.876994 d\n  Eccentricity, e         = 0.000            Rotational period   = Synchronous\n  Inclination, i  (deg)   = 157.3  \n\n Fit to all reported measurements through 2020 (Voyager 2, ground, HST)\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:04:06 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Triton (801)                    {source: nep097_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Triton (801)",
+			"radius" : 
+			[
+				1352600.0,
+				1352600.0,
+				1352600.0
+			]
+		},
+		"899" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: April 22, 2021              Neptune                               899\n \n PHYSICAL DATA (update 2021-May-03):\n  Mass x10^24 (kg)      = 102.409         Density (g/cm^3)       =  1.638\n  Equat. radius (1 bar) = 24766+-15 km    Volume, 10^10 km^3     = 6254     \n  Vol. mean radius (km) = 24624+-21       Polar radius (km)      = 24342+-30\n  Geometric Albedo      = 0.41            Flattening             =  0.0171\n  Sid. rot. period (III)= 16.11+-0.01 hr  Sid. rot. rate (rad/s) =  0.000108338 \n  Mean solar day, h     =~16.11 h         \n  GM (km^3/s^2)         = 6835099.97      GM 1-sigma (km^3/s^2)  = +-10 \n  Equ. grav, ge (m/s^2) = 11.15           Pol. grav, gp (m/s^2)  = 11.41+-0.03\n  Visual magnitude V(1,0)= -6.87\n  Vis. mag. (opposition)=  +7.84          Obliquity to orbit     = 28.32 deg\n  Sidereal orbit period = 164.788501027 y Sidereal orbit period  = 60189 d\n  Mean daily motion     = 0.006020076dg/d Mean orbit velocity    =  5.43 km/s \n  Atmos. temp. (1 bar)  =  72+-2 K        Escape speed (1 bar)  =  23.5 km/s     \n  Aroche(ice)/Rp        =  2.98           Hill's sphere rad., Rp = 4700\n                                 Perihelion  Aphelion    Mean\n  Solar Constant (W/m^2)         1.54        1.49        1.51\n  Maximum Planetary IR (W/m^2)   0.52        0.52        0.52\n  Minimum Planetary IR (W/m^2)   0.52        0.52        0.52\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:04:11 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Neptune (899)                   {source: nep097_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Neptune (899)",
+			"radius" : 
+			[
+				24624000.0,
+				24624000.0,
+				24624000.0
+			]
+		},
+		"901" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Apr 03, 2024              Charon / (Pluto)                        901 \n\n Pre-computed solution PLU060/DE440. Fit to post New Horizons encounter and \n Gaia data through 2023.  For discussion, see ...\n\n M. Brozovic, R. A. Jacobson (2024) \"Post-New Horizons orbits and masses \n for the satellites of Pluto\". AJ (in press)\n\n Satellite General Physical Properties (PLU060):\n  GM (km^3/s^2)           = 106.10 +- 0.3 Density (g cm^-3)     = 1.853 +- 0.004\n  Radius (km, IAU2015)    = 606 +- 0.5    Geometric albedo      = \n  Mass (10^21 kg )        =               Hill Sphere radius, km= \n  Surface gravity (cm/s^2)=               Escape velocity, km/s = \n\n Satellite mean orbital data (2000-Jan-01.5 TDB, planet-centered equatorial):\n  Semi-major axis, a (km) = 19600.        Orbital period, days  = 6.387222\n  Eccentricity, e         =     0.000     Inclination, deg.     = 0.0\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:04:17 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Charon (901)                    {source: plu060_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Charon (901)",
+			"radius" : 
+			[
+				606000.0,
+				606000.0,
+				606000.0
+			]
+		},
+		"999" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\n Revised: Apr 03, 2024              134340 Pluto                            999\n \n Pre-computed solution PLU060/DE440. Fit to post New Horizons encounter and\n Gaia data through 2023. For discussion, see ...\n\n M. Brozovic, R. A. Jacobson (2024) \"Post-New Horizons orbits and masses\n for the satellites of Pluto\". AJ (in press)\n\n PHYSICAL DATA (updated 2021-Jun-07; Mc= Charon mass, radius is IAU 2015):\n  Mass x10^22 (kg)      = 1.307+-0.018    Volume, 10^10 km^3    = 0.697\n  GM (planet) km^3/s^2  = 869.326         Density (R=1195 km)   = 1.86 g/cm^3\n  GM 1-sigma, km^3/s^2  = 0.4             Surface gravity       = 0.611 m/s^2 \n  Vol. mean radius (km) = 1188.3+-1.6     Mass ratio (Mc/Mp)    = 0.122\n  Sidereal rot. period  = 153.29335198 h  Sid. rot. rat, rad/s  = 0.0000113856\n  Mean solar day, h     = 153.2820        Mean orbit velocity   = 4.67 km/s\n  Sidereal orbit period = 249.58932 yr    Escape speed, km/s    = 1.21            \n                                 Perihelion  Aphelion    Mean\n  Solar Constant (W/m^2)         1.56        0.56        0.88\n  Maximum Planetary IR (W/m^2)   0.8         0.3         0.5\n  Minimum Planetary IR (W/m^2)   0.8         0.3         0.5\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:04:22 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: Pluto (999)                     {source: plu060_merged}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\n",
+			"name" : "Pluto (999)",
+			"radius" : 
+			[
+				1188300.0,
+				1188300.0,
+				1188300.0
+			]
+		},
+		"DES=20000001;" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\nJPL/HORIZONS                  1 Ceres (A801 AA)            2025-Mar-02 20:04:27\nRec #:       1 (+COV) Soln.date: 2021-Apr-13_11:04:44   # obs: 1075 (1995-2021)\n \nIAU76/J2000 helio. ecliptic osc. elements (au, days, deg., period=Julian yrs):\n \n  EPOCH=  2458849.5 ! 2020-Jan-01.00 (TDB)         Residual RMS= .24563\n   EC= .07687465013145245  QR= 2.556401146697176   TP= 2458240.1791309435\n   OM= 80.3011901917491    W=  73.80896808746482   IN= 10.59127767086216\n   A= 2.769289292143484    MA= 130.3159688200986   ADIST= 2.982177437589792\n   PER= 4.60851            N= .213870844           ANGMOM= .028541613\n   DAN= 2.69515            DDN= 2.81323            L= 153.8445987\n   B= 10.1666387           MOID= 1.59231997        TP= 2018-May-01.6791309435\n \nAsteroid physical parameters (km, seconds, rotational period in hours):\n   GM= 62.6284             RAD= 469.7              ROTPER= 9.07417\n   H= 3.34                 G= .120                 B-V= .713\n                           ALBEDO= .090            STYP= C\n\nASTEROID comments: \n1: soln ref.= JPL#48, OCC=0           radar(60 delay, 0 Dop.)\n2: source=ORB\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:04:27 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: 1 Ceres (A801 AA)               {source: JPL#48}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nSmall perturbers: Yes                             {source: SB441-N16}\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\nInitial IAU76/J2000 heliocentric ecliptic osculating elements (au, days, deg.):\n  EPOCH=  2458849.5 ! 2020-Jan-01.00 (TDB)         Residual RMS= .24563        \n   EC= .07687465013145245  QR= 2.556401146697176   TP= 2458240.1791309435      \n   OM= 80.3011901917491    W=  73.80896808746482   IN= 10.59127767086216       \n  Equivalent ICRF heliocentric cartesian coordinates (au, au/d):\n   X= 1.007608869613381E+00  Y=-2.390064275223502E+00  Z=-1.332124522752402E+00\n  VX= 9.201724467227128E-03 VY= 3.370381135398406E-03 VZ=-2.850337057661093E-04\nAsteroid physical parameters (km, seconds, rotational period in hours):        \n   GM= 62.6284             RAD= 469.7              ROTPER= 9.07417             \n   H= 3.34                 G= .120                 B-V= .713                   \n                           ALBEDO= .090            STYP= C                     \n*******************************************************************************\n",
+			"name" : "1 Ceres (A801 AA)",
+			"radius" : 
+			[
+				469700.0,
+				469700.0,
+				469700.0
+			]
+		},
+		"DES=20000002;" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\nJPL/HORIZONS                 2 Pallas (A802 FA)            2025-Mar-02 20:04:32\nRec #:       2 (+COV) Soln.date: 2024-Dec-12_17:11:23   # obs: 9741 (1804-2024)\n \nIAU76/J2000 helio. ecliptic osc. elements (au, days, deg., period=Julian yrs):\n \n  EPOCH=  2457870.5 ! 2017-Apr-27.00 (TDB)         Residual RMS= .27459\n   EC= .230654532309575    QR= 2.133412766192127   TP= 2458320.726491679\n   OM= 173.0883296761345   W=  309.9974922206295   IN= 34.83970333808084\n   A= 2.773023116125753    MA= 263.9040942238881   ADIST= 3.412633466059379\n   PER= 4.61784            N= .21343903            ANGMOM= .027873209\n   DAN= 2.28651            DDN= 3.08249            L= 128.7190393\n   B= -25.9536438          MOID= 1.23221004        TP= 2018-Jul-21.2264916790\n \nAsteroid physical parameters (km, seconds, rotational period in hours):\n   GM= 13.63               RAD= 256.5              ROTPER= 7.813221\n   H= 4.11                 G= .110                 B-V= .635\n                           ALBEDO= .155            STYP= B\n\nASTEROID comments: \n1: soln ref.= JPL#67, OCC=0\n2: source=ORB\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:04:32 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: 2 Pallas (A802 FA)              {source: JPL#67}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nSmall perturbers: Yes                             {source: SB441-N16}\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\nInitial IAU76/J2000 heliocentric ecliptic osculating elements (au, days, deg.):\n  EPOCH=  2457870.5 ! 2017-Apr-27.00 (TDB)         Residual RMS= .27459        \n   EC= .230654532309575    QR= 2.133412766192127   TP= 2458320.726491679       \n   OM= 173.0883296761345   W=  309.9974922206295   IN= 34.83970333808084       \n  Equivalent ICRF heliocentric cartesian coordinates (au, au/d):\n   X= 2.964644625717728E+00  Y= 1.388006437987008E-01  Z=-2.357603579788067E-01\n  VX=-2.665042982037095E-03 VY= 9.076070445626725E-03 VZ=-1.610668574682083E-03\nAsteroid physical parameters (km, seconds, rotational period in hours):        \n   GM= 13.63               RAD= 256.5              ROTPER= 7.813221            \n   H= 4.11                 G= .110                 B-V= .635                   \n                           ALBEDO= .155            STYP= B                     \n*******************************************************************************\n",
+			"name" : "2 Pallas (A802 FA)",
+			"radius" : 
+			[
+				256500.0,
+				256500.0,
+				256500.0
+			]
+		},
+		"DES=20000004;" : 
+		{
+			"desc" : "API VERSION: 1.0\nAPI SOURCE: NASA/JPL Horizons API\n\n*******************************************************************************\nJPL/HORIZONS                  4 Vesta (A807 FA)            2025-Mar-02 20:04:38\nRec #:       4 (+COV) Soln.date: 2021-Apr-13_11:15:57   # obs: 9451 (1950-2021)\n \nIAU76/J2000 helio. ecliptic osc. elements (au, days, deg., period=Julian yrs):\n \n  EPOCH=  2458849.5 ! 2020-Jan-01.00 (TDB)         Residual RMS= .47385\n   EC= .08857261385730482  QR= 2.15270823108896    TP= 2458247.8038331456\n   OM= 103.8092892453337   W=  150.8357762126256   IN= 7.14181494423702\n   A= 2.361908654291772    MA= 163.3754032354997   ADIST= 2.571109077494583\n   PER= 3.62997            N= .271524753           ANGMOM= .026333145\n   DAN= 2.53982            DDN= 2.17514            L= 254.8345779\n   B= 3.4734318            MOID= 1.13987994        TP= 2018-May-09.3038331456\n \nAsteroid physical parameters (km, seconds, rotational period in hours):\n   GM= 17.28824            RAD= 262.7              ROTPER= 5.342128\n   H= 3.25                 G= .320                 B-V= .782\n                           ALBEDO= .4228           STYP= V\n\nASTEROID comments: \n1: soln ref.= JPL#36, OCC=0           radar(2977 delay, 0 Dop\n2: source=ORB\n*******************************************************************************\n\n\n*******************************************************************************\nEphemeris / WWW_USER Sun Mar  2 20:04:38 2025 Pasadena, USA      / Horizons\n*******************************************************************************\nTarget body name: 4 Vesta (A807 FA)               {source: JPL#36}\nCenter body name: Solar System Barycenter (0)     {source: DE441}\nCenter-site name: BODY CENTER\n*******************************************************************************\nStart time      : A.D. 2025-Jan-01 00:00:00.0000 TDB\nStop  time      : A.D. 2025-Feb-01 00:00:00.0000 TDB\nStep-size       : 1 minutes\n*******************************************************************************\nCenter geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}\nCenter cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}\nCenter radii    : (undefined)\nSmall perturbers: Yes                             {source: SB441-N16}\nOutput units    : KM-S\nCalendar mode   : Gregorian\nOutput type     : GEOMETRIC cartesian states\nOutput format   : 2 (position and velocity)\nReference frame : Ecliptic of J2000.0\n*******************************************************************************\nInitial IAU76/J2000 heliocentric ecliptic osculating elements (au, days, deg.):\n  EPOCH=  2458849.5 ! 2020-Jan-01.00 (TDB)         Residual RMS= .47385        \n   EC= .08857261385730482  QR= 2.15270823108896    TP= 2458247.8038331456      \n   OM= 103.8092892453337   W=  150.8357762126256   IN= 7.14181494423702        \n  Equivalent ICRF heliocentric cartesian coordinates (au, au/d):\n   X= 1.243605461680222E+00  Y= 2.133870405923554E+00  Z= 6.874866847781977E-01\n  VX=-8.779290950353064E-03 VY= 4.462599423343603E-03 VZ= 2.927653651039283E-03\nAsteroid physical parameters (km, seconds, rotational period in hours):        \n   GM= 17.28824            RAD= 262.7              ROTPER= 5.342128            \n   H= 3.25                 G= .320                 B-V= .782                   \n                           ALBEDO= .4228           STYP= V                     \n*******************************************************************************\n",
+			"name" : "4 Vesta (A807 FA)",
+			"radius" : 
+			[
+				262700.0,
+				262700.0,
+				262700.0
 			]
 		}
 	}

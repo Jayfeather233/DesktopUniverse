@@ -37,6 +37,21 @@
 //     eraJd2cal(tdb1, tdb2, iy, im, id, fd);
 // }
 
+double getTDBsec()
+{
+    auto now = std::chrono::system_clock::now();
+
+    auto now_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(now);
+    auto epoch = now_ms.time_since_epoch();
+    long long milliseconds = std::chrono::duration_cast<std::chrono::milliseconds>(epoch).count();
+
+    milliseconds -= 1735660800000;
+    milliseconds += 212602449600000;
+    milliseconds += 69183; // round number for UTC->TDB
+
+    return milliseconds / 1000.0;
+}
+
 void getTDBWithUTC(int *iy, int *im, int *id, int *ihmin, double *fsec)
 {
     auto now = std::chrono::system_clock::now();
