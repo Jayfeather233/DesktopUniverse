@@ -67,4 +67,5 @@ IO(Jupiter)-CI:
 
 - skybox
 - planetory texture
+- some AP/PE tag for trajectory
 - migrate to windows(maybe)

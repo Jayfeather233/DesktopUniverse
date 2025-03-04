@@ -12,6 +12,10 @@
 template <glm::length_t L, typename T, glm::qualifier Q>
 T calculateAngle(const glm::vec<L, T, Q> &vec1, const glm::vec<L, T, Q> &vec2)
 {
+    if (glm::length(vec1) <= std::numeric_limits<T>::epsilon() || glm::length(vec2) == std::numeric_limits<T>::epsilon())
+    {
+        return 0;
+    }
     // Normalize the vectors
     glm::vec<L, T, Q> normVec1 = glm::normalize(vec1);
     glm::vec<L, T, Q> normVec2 = glm::normalize(vec2);
@@ -139,11 +143,11 @@ void trajectory::set_trajectories(const std::vector<celestial> &bodies)
     {
         if (body.radiusX > 0.0)
         {
-            fmt::print("id {}, jd: {}", id, body.trajectory[0].JDTDB);
+            fmt::print("id {}, jd: {}\n", id, body.trajectory[0].JDTDB);
             // size_t begin_id = ((id-body.trajectory[0].JDTDB)/60);
             size_t begin_id = 0;
             size_t las = begin_id;
-            fmt::print("las: {}\n", las);
+            fmt::print("{} l1: {} ", body.name, trajectoryVertices.size());
             for (size_t i = las; i < body.tr_trajectory.size(); ++i)
             { // t min
                 // fmt::print("{}\n", i);
@@ -193,6 +197,7 @@ void trajectory::set_trajectories(const std::vector<celestial> &bodies)
                 trajectoryColors.push_back(1.0f);
                 trajectoryColors.push_back(1.0f);
             }
+            fmt::print("l2: {}\n", trajectoryVertices.size());
         }
     }
 
@@ -245,6 +250,8 @@ void trajectory::render(std::shared_ptr<ogl::Program> s) const
 
     glBindVertexArray(vao);
     glDrawArrays(GL_LINES, 0, trajectoryVertices.size());
+
+    // fmt::print("tr: {}\n", trajectoryVertices.size());
 
     // GLenum er = glGetError();
     // if (er != 0)

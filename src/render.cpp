@@ -169,8 +169,9 @@ void renderer::initOGL() {
     }
     glEnable(GL_MULTISAMPLE);
     glEnable(GL_DEPTH_TEST);
-    glEnable(GL_CULL_FACE);
+    // glEnable(GL_CULL_FACE);
     glEnable(GL_BLEND);
+    glDepthFunc(GL_LESS);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
@@ -266,11 +267,16 @@ void renderer::render3D(double TDB){
         if (body.radiusX > 0){
             shaderProgram_body->setUniform("model", getModelMat(body, TDB));
             so.render(shaderProgram_body);
+
+            // glm::f64vec4 pr = cam3d.GetProjectionMat() * cam3d.GetViewMatrix() * getModelMat(body, TDB) * glm::f64vec4(0.0, 0.0, 0.0, 1.0);
+            // double depth = log(float(pr.z))/100;
+            // pr = glm::f64vec4(pr.x/pr.z, pr.y/pr.z, depth, 1.0);
+            // fmt::print("body: {} ", body.name);
+            // printVec(pr);
         }
     }
 
     shaderProgram_traj->bind();
-    // glDepthFunc(GL_ALWAYS);
     cam3d.SetUniform(shaderProgram_traj);
     if (&tr.getCenter() != nullptr)
     {
@@ -317,7 +323,7 @@ void renderer::renderLoop() {
         //         std::chrono::milliseconds(static_cast<int64_t>(1000 * (frameDuration - deltaTime))));
         // }
         if (ddd == 10) {
-            fmt::print("delta time: {}\n", tdelta/10);
+            fmt::print("fps: {}\n", 10.0/tdelta);
             ddd = 0;
             tdelta = 0;
         } else {
