@@ -323,7 +323,7 @@ void renderer::renderLoop() {
         //         std::chrono::milliseconds(static_cast<int64_t>(1000 * (frameDuration - deltaTime))));
         // }
         if (ddd == 10) {
-            fmt::print("fps: {}\n", 10.0/tdelta);
+            std::cout << fmt::format("fps: {}\r", 10.0/tdelta) << std::flush;
             ddd = 0;
             tdelta = 0;
         } else {
